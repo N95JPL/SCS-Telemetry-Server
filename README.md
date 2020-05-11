@@ -35,5 +35,5 @@ Items shown in *italic* will be included as standard but can be disabled in Sett
   * - [ ] Length between breaks
   * - [ ] Max daily driving hours
 - [ ] Create Settings Tab
-- [ ] [ETS-Local-Radio](https://github.com/Koenvh1/ets2-local-radio) Compatibility (Pull Request Sent)
+- [ ] *[ETS-Local-Radio](https://github.com/Koenvh1/ets2-local-radio) Compatibility (Pull Request Sent)*
 - [ ] Keyboard & Game Controller Support (in-game)
