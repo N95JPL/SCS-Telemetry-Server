@@ -1,0 +1,304 @@
+/* Tabber ------------------------------------------------------------- */
+
+ul.tab-nav {
+    list-style: none;
+    border-bottom: 1px solid #bbb;
+    padding-left: 5px;
+	margin-top: 15px;
+}
+
+ul.tab-nav li {
+    display: inline;
+}
+
+ul.tab-nav li a.button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+    border-bottom: none;
+}
+
+ul.tab-nav li a.active.button {
+    border-bottom: 0.175em solid #fff;
+}
+
+.tab-content .tab-pane {
+    display: none;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}
+
+/* vMicro -------------------------- */
+
+li>a.active, li>a.active:hover {
+	background-color: purple;
+	color: white;
+}
+
+#debugCharts canvas {
+    min-height: 450px;
+}
+
+.portRow input {
+	width: 100%;
+}
+
+button.removePort {
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+button#addPort {
+	background-color: green;
+	color: white;
+	font-weight: bold;
+}
+
+/* Sliders ------------------------- */
+.slidecontainer {
+  width: 80%; /* Width of the outside container */
+}
+
+.tilecontainer {
+	text-align: center;
+    background-color: #d3d3d36e;
+    border-radius: 15px;
+}
+
+.tilecontainer>p:first-of-type {
+	font-weight: bold;
+	margin-top: 1.25rem;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+
+/* Spinner */
+
+.cubespinner {
+    -webkit-animation-timing-function: ease-in-out;
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50px 50px 0;
+    -moz-transform-origin: 50px 50px 0;
+    -ms-transform-origin: 50px 50px 0;
+    transform-origin: 50px 50px 0;
+    display: inline-block;
+}
+
+    .cubespinner div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 0px solid #ccc;
+        background: rgba(255,255,255,0.8);
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+        line-height: 40px;
+        text-align: center;
+        font-size: 100px;
+    }
+
+    .cubespinner .face1 {
+        -webkit-transform: translateZ(50px);
+        -moz-transform: translateZ(50px);
+        -ms-transform: translateZ(50px);
+        transform: translateZ(50px);
+    }
+
+    .cubespinner .face2 {
+        -webkit-transform: rotateY(90deg) translateZ(50px);
+        -moz-transform: rotateY(90deg) translateZ(50px);
+        -ms-transform: rotateY(90deg) translateZ(50px);
+        transform: rotateY(90deg) translateZ(50px);
+    }
+
+    .cubespinner .face3 {
+        -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+        -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+        -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+        transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+    }
+
+    .cubespinner .face4 {
+        -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(50px);
+        -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(50px);
+        -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(50px);
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(50px);
+    }
+
+    .cubespinner .face5 {
+        -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(50px);
+        -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(50px);
+        -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(50px);
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(50px);
+    }
+
+    .cubespinner .face6 {
+        -webkit-transform: rotateX(-90deg) translateZ(50px);
+        -moz-transform: rotateX(-90deg) translateZ(50px);
+        -ms-transform: rotateX(-90deg) translateZ(50px);
+        transform: rotateX(-90deg) translateZ(50px);
+    }
+
+
+#debugExpr td, #debugExpr th {
+    text-align: center;
+}
+
+.digiPins {
+    margin-bottom:5px;
+}
+
+
+/* Theming According to Browser Colouring */
+/* Apply a default color scheme */
+@media (prefers-color-scheme: no-preference) {
+}
+
+/* Apply a light color scheme */
+@media (prefers-color-scheme: light) {
+}
+
+/* Apply a dark color scheme */
+/* NOTE - All Charting Colurs are applied using same @media inspection 
+    from Javascript...
+*/
+@media (prefers-color-scheme: dark) {
+    body, legend {
+        background-color: #272727 !important;
+        color: white !important;
+    }
+
+    input, textarea, select, .btn-primary, .btn {
+        background-color: #121212 !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    a {
+        color: #fff !important;
+    }
+
+    .tilecontainer, code {
+        background-color:rgba(101, 101, 101, 0.33) !important;
+    }
+}
+
+/* Dark Theming for Charts Specifically */
+/* Tip: Apply Opacity to the Body Colours, None to the Borders */
+.ChartThemePallette_dark.idx1 {
+    background-color: rgba(27, 38, 44, 0.2);
+}
+.ChartThemePallette_dark.idx2 {
+    background-color: rgba(15, 76, 117, 0.2);
+}
+.ChartThemePallette_dark.idx3 {
+    background-color: rgba(50, 130, 184, 0.2);
+}
+.ChartThemePallette_dark.idx4 {
+    background-color: rgba(187, 225, 250, 0.2);
+}
+.ChartThemePallette_dark.idx5 {
+    background-color: rgba(21, 25, 101, 0.2);
+}
+.ChartThemePallette_dark.idx6 {
+    background-color: rgba(50, 64, 123, 0.2);
+}
+.ChartThemePallette_Border_dark.idx1 {
+    background-color: rgba(27, 38, 44, 1);
+}
+
+.ChartThemePallette_Border_dark.idx2 {
+    background-color: rgba(15, 76, 117, 1);
+}
+
+.ChartThemePallette_Border_dark.idx3 {
+    background-color: rgba(50, 130, 184, 1);
+}
+
+.ChartThemePallette_Border_dark.idx4 {
+    background-color: rgba(187, 225, 250, 1);
+}
+
+.ChartThemePallette_Border_dark.idx5 {
+    background-color: rgba(21, 25, 101, 1);
+}
+
+.ChartThemePallette_Border_dark.idx6 {
+    background-color: rgba(50, 64, 123, 1);
+}
+
+/* Light Theming for Charts Specifically */
+.ChartThemePallette_light.idx1 {
+    background-color: rgba(5, 223, 215, 0.2);
+}
+
+.ChartThemePallette_light.idx2 {
+    background-color: rgba(236, 115, 115, 0.2);
+}
+
+.ChartThemePallette_light.idx3 {
+    background-color: rgba(216, 181, 181, 0.2);
+}
+
+.ChartThemePallette_light.idx4 {
+    background-color: rgba(255, 225, 150, 0.2);
+}
+
+.ChartThemePallette_light.idx5 {
+    background-color: rgba(255, 174, 143, 0.2);
+}
+
+.ChartThemePallette_light.idx6 {
+    background-color: rgba(205, 102, 132, 0.2);
+}
+
+.ChartThemePallette_Border_light.idx1 {
+    background-color: rgba(5, 223, 215, 1);
+}
+
+.ChartThemePallette_Border_light.idx2 {
+    background-color: rgba(236, 115, 115, 1);
+}
+
+.ChartThemePallette_Border_light.idx3 {
+    background-color: rgba(216, 181, 181, 1);
+}
+
+.ChartThemePallette_Border_light.idx4 {
+    background-color: rgba(255, 225, 150, 1);
+}
+
+.ChartThemePallette_Border_light.idx5 {
+    background-color: rgba(255, 174, 143, 1);
+}
+
+.ChartThemePallette_Border_light.idx6 {
+    background-color: rgba(205, 102, 132, 1);
+}

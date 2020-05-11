@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding ="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <PropertyGroup Label="Globals" >
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{cce9ff6b-b2e3-475c-b133-ff2d223359cc}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCUFRIEND_kbv.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)FreeDefaultFonts.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)MCUFRIEND_kbv.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)TFT_HX8357GLUE.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)UTFTGLUE.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)keywords.txt" />
+<Text Include="$(MSBuildThisFileDirectory)library.properties" />
+<Text Include="$(MSBuildThisFileDirectory)license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+</Project>

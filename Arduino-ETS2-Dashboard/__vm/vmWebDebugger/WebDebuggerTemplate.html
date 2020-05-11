@@ -1,0 +1,177 @@
+﻿ <!DOCTYPE html>
+ <!-- Skeleton for now -- Look at https://haltu.github.io/muuri/ once basics done -->
+ <html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>vMicro Web Tools</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/Raleway.css">
+
+  <!-- CSS:: http://getskeleton.com/
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/skeleton-tabs.css">
+  <script src="js/skeleton-tabs.js"></script>
+  
+  <!-- Custom –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Branding
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Charting::https://www.chartjs.org/
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <link rel="stylesheet" href="css/Chart_2-8-0.min.css">
+ <script type="text/javascript" src="js/Chart_2-8-0.min.js"></script>
+  <!-- File Saving:: https://github.com/eligrey/FileSaver.js
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script type="text/javascript" src="js/FileSaver.min.js"></script> 
+  <!-- Local Storage Management:: https://github.com/localForage/localForage
+  -->
+ <script type="text/javascript" src="js/localforage.min.js"></script> 
+ 
+ 
+</head>
+<body>
+    <!-- Theme Pallette to be stripped into Charting JS -->
+    <div style="display:none;">
+        <div class="ChartThemePallette_dark idx1"></div>
+        <div class="ChartThemePallette_dark idx2"></div>
+        <div class="ChartThemePallette_dark idx3"></div>
+        <div class="ChartThemePallette_dark idx4"></div>
+        <div class="ChartThemePallette_dark idx5"></div>
+        <div class="ChartThemePallette_dark idx6"></div>
+        <div class="ChartThemePallette_Border_dark idx1"></div>
+        <div class="ChartThemePallette_Border_dark idx2"></div>
+        <div class="ChartThemePallette_Border_dark idx3"></div>
+        <div class="ChartThemePallette_Border_dark idx4"></div>
+        <div class="ChartThemePallette_Border_dark idx5"></div>
+        <div class="ChartThemePallette_Border_dark idx6"></div>
+        <div class="ChartThemePallette_light idx1"></div>
+        <div class="ChartThemePallette_light idx2"></div>
+        <div class="ChartThemePallette_light idx3"></div>
+        <div class="ChartThemePallette_light idx4"></div>
+        <div class="ChartThemePallette_light idx5"></div>
+        <div class="ChartThemePallette_light idx6"></div>
+        <div class="ChartThemePallette_Border_light idx1"></div>
+        <div class="ChartThemePallette_Border_light idx2"></div>
+        <div class="ChartThemePallette_Border_light idx3"></div>
+        <div class="ChartThemePallette_Border_light idx4"></div>
+        <div class="ChartThemePallette_Border_light idx5"></div>
+        <div class="ChartThemePallette_Border_light idx6"></div>
+    </div>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <!-- Tab links -->
+	<ul class="tab-nav" id="tabnav">
+	  <li>
+		<a class="button" panel="settingsPanel"  style="display:none;">Settings</a>
+	  </li>
+	  <li id="debugPanelbtn">
+		<a  class="button active" panel="debugPanel">vMicro Serial Debugger</a>
+	  </li>
+	  <!--<li>
+		<a class="button" panel="userPanelPane">Default</a>
+	  </li>-->
+	</ul>
+</div>
+
+  <div class="container">
+  
+  <div class="tab-content" style="display:none;">
+      <div id="settingsPanel" class="tab-pane">
+		<div id="settingsControls">
+			<button id="addPort">+ Port</button>
+		</div>
+		<!-- will become dynamic later -->
+		<div id="SerialPort_0_Panel" class="row portRow">
+		<div class="one column">
+		<label for="SerialPort_0_Remove">&nbsp;</label>
+        <button id="SerialPort_0_Remove" class="removePort">-</button>
+		</div>
+        <div class="five columns">
+            <label for="SerialPort_0_Address">IPAddress</label>
+            <input id="SerialPort_0_Address" type="text"></button>
+        </div>
+        <div class="two columns">
+            <label for="SerialPort_0_COM">COM</label>
+            <button id="SerialPort_0_COM" type="text"></button>
+        </div>
+        <div class="three columns">
+            <label for="SerialPort_0_Name">Friendly Name</label>
+            <button id="SerialPort_0_Name" type="text"></button>
+        </div>
+		<div class="one column">
+		<label for="SerialPort_0_Apply">&nbsp;</label>
+        <button id="SerialPort_0_Apply">Apply</button>
+		</div>
+		
+		</div>
+	  </div>
+ </div>
+ <div id="userPanels">
+	<div class="tab-content">
+	  <div id="userPanelPane" class="tab-pane">
+		<div id="userPanel" class="row"></div>
+	  </div>
+   </div>
+	   <!-- Dynamically created -->
+	   </div>
+	   
+	  <div class="tab-content">
+          <div id="debugPanel" class="tab-pane active">
+              <div class="row">
+                  <div class="twelve columns" style="margin-top: 5%">
+
+                      <h3>[<span id="comPort"></span>]</h3>
+                      <input id="userInput" type="text"></input><button id="send">Send</button><button id="step">Continue</button>
+
+                      <br />
+                      <div id="output" style="overflow:scroll; height:200px; font-size: small; line-height: 0em; padding-top: 20px; "></div>
+                  </div>
+
+              </div>
+              <div style="padding-top:5%; " class="row">
+                  <div id="debugExpr" class="twelve columns" style="margin-top: 20px;">
+                  </div>
+                  <div class="twelve columns" style="margin-top: 20px">
+                      <pre><code id="debugSrc">
+			 </code></pre>
+                  </div>
+
+              </div>
+              <h3 class="digitalPinItems" style="margin-top: 20px; display: none;">Digital Pins</h3>
+              <div id="digitalPins" class="analogPinItems" style="display: none;">
+
+              </div>
+              <h3 class="analogPinItems" style="margin-top: 20px; display: none;">Analog Pins</h3>
+              <div id="analogPins" class="analogPinItems" style=" display: none;">
+
+              </div>
+          </div>
+
+
+          </div>
+  </div>
+  
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script language="javascript" type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  
+   
+  
+  <script src="js/vmicro.js">
+  </script>

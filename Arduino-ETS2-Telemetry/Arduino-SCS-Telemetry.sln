@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arduino-ETS2-Telemetry", "Arduino-ETS2-Telemetry.csproj", "{ABD21ABE-1288-48BD-9716-2DFEE5296D09}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0B739935-E779-415A-B76C-0073EAE72A81} = {0B739935-E779-415A-B76C-0073EAE72A81}
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468} = {B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arduino-Client", "..\SCSSdkClient\Arduino-Client.csproj", "{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arduino-Telemetry", "..\scs-telemetry\vs2012\scs-telemetry.vcxproj", "{0B739935-E779-415A-B76C-0073EAE72A81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Debug|x64.Build.0 = Debug|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Debug|x86.Build.0 = Debug|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Release|x64.ActiveCfg = Release|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Release|x64.Build.0 = Release|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABD21ABE-1288-48BD-9716-2DFEE5296D09}.Release|x86.Build.0 = Release|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Debug|x64.Build.0 = Debug|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Debug|x86.Build.0 = Debug|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Release|x64.ActiveCfg = Release|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Release|x64.Build.0 = Release|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Release|x86.ActiveCfg = Release|Any CPU
+		{B62F8E57-9D8C-4EA2-90E4-1F6B09DCE468}.Release|x86.Build.0 = Release|Any CPU
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Debug|Any CPU.Build.0 = Debug|Win32
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Debug|x64.ActiveCfg = Debug|x64
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Debug|x64.Build.0 = Debug|x64
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Debug|x86.ActiveCfg = Debug|Win32
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Debug|x86.Build.0 = Debug|Win32
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Release|x64.ActiveCfg = Release|Win32
+		{0B739935-E779-415A-B76C-0073EAE72A81}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43FDFC29-FC19-4F34-9FA6-B74AF167C154}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\bin\Debug\Arduino-Client.xml
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\bin\Debug\Arduino-Client.dll
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\bin\Debug\Arduino-Client.pdb
+D:\ETS2-Arduino-Telemetry\Arduino-ETS2-Telemetry\bin\Arduino-Client.xml
+D:\ETS2-Arduino-Telemetry\Arduino-ETS2-Telemetry\bin\Arduino-Client.dll
+D:\ETS2-Arduino-Telemetry\Arduino-ETS2-Telemetry\bin\Arduino-Client.pdb
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Debug\Arduino-Client.csproj.CoreCompileInputs.cache
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Debug\Arduino-Client.dll
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Debug\Arduino-Client.pdb
+D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Debug\Arduino-Client.csprojAssemblyReference.cache
