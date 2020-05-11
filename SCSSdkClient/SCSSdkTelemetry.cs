@@ -13,7 +13,7 @@ namespace SCSSdkClient
     /// </summary>
     public class SCSSdkTelemetry : IDisposable
     {
-        private const string DefaultSharedMemoryMap = "Local\\JPLogicsSCSPlugin";
+        private const string DefaultSharedMemoryMap = "Local\\JPLogicSCSPlugin";
         private const int DefaultUpdateInterval = 100;
         private const int DefaultPausedUpdateInterval = 1000;
 
