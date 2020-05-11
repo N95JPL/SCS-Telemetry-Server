@@ -17,6 +17,20 @@ Reddit Showcase #1 Post [Reddit](https://www.reddit.com/r/trucksim/comments/gd1p
 * User UI showing current Information
 * Can determine the closest City & Country to the users truck! (using the Co-Ordinates given ingame)
 
+### -- File Structure --
+<pre>
+├── Publish (Do not use this yet, not functional)
+├── SCS-Telemetry-Server-Arduino
+│    ├── For displaying data on a 3.5" TFT Screen
+├── SCS-Telemetry-Server
+│    ├── The main program!
+├── SCSSdkClient
+│    ├── The .dll compiler to connect to the Shared Memory (from RenCloud)
+├── scs-telemetry
+│    ├── The .dll compiler that actually connects to the game and produces data
+├── scs_sdk_1_11
+│    ├── The SDK this program currently uses (Latest)
+</pre>
 Items shown in *italic* will be included as standard but can be disabled in Settings!
 ### -- To do --
 - [x] ~~Rename to "SCS Telemetry Server" (Remove soley Arduino use [Decided to be a little more inclusive!])~~
