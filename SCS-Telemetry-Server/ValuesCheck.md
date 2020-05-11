@@ -1,5 +1,5 @@
 Game Values (V.1.10.5)
-│[ ] ├── Telemetry Timestamp (<mark>not the in-game time</mark>, only for usage in code, see documentation for more information #todo add link) (<mark>now ulong</mark>)
+**│[ ] ├── Telemetry Timestamp (<mark>not the in-game time</mark>, only for usage in code, see documentation for more information #todo add link) (<mark>now ulong</mark>)
 │[ ] ├── <ins>Simulation</ins> Timestamp
 │[ ] ├── <ins>Render</ins> Timestamp
 │[ ] ├── Paused, game state
