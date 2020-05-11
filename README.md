@@ -19,7 +19,7 @@ Reddit Showcase #1 Post [Reddit](https://www.reddit.com/r/trucksim/comments/gd1p
 
 Items shown in *italic* will be included as standard but can be disabled in Settings!
 ### -- To do --
-- [ ] Rename to "SCS Telemetry Server" (Remove soley Arduino use [Decided to be a little more inclusive!])
+- [x] Rename to "SCS Telemetry Server" (Remove soley Arduino use [Decided to be a little more inclusive!])
 - [ ] Webserver API to stream JSON Telemetry
   * - [ ] Combined JSON Streams
   * - [ ] Individual Streams
@@ -34,3 +34,4 @@ Items shown in *italic* will be included as standard but can be disabled in Sett
 - [ ] *Driving Hours Management*
 - [ ] Create Settings Tab
 - [ ] [ETS-Local-Radio](https://github.com/Koenvh1/ets2-local-radio) Compatibility (Pull Request Sent)
+- [ ] Keyboard & Game Controller Support (in-game)
