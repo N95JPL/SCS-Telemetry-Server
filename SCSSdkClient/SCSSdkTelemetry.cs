@@ -19,13 +19,12 @@ namespace SCSSdkClient
 
         private int updateInterval;
 
-        // todo: enhancement:  some way to set this value 
+        // todo: enhancement:  some way to set this value
         private readonly int pausedUpdateInterval = DefaultPausedUpdateInterval;
 
         private Timer _updateTimer;
 
         private ulong lastTime = 0xFFFFFFFFFFFFFFFF;
-
 
 #if LOGGING
         public void Dispose() {
@@ -33,10 +32,10 @@ namespace SCSSdkClient
             Log.SaveShutdown();
         }
 #else
+
         public void Dispose() => _updateTimer?.Dispose();
 
 #endif
-
 
         private SharedMemory SharedMemory;
 
@@ -64,20 +63,28 @@ namespace SCSSdkClient
         public string Map { get; private set; }
         public int UpdateInterval => paused ? pausedUpdateInterval : updateInterval;
 
-
         public Exception Error { get; private set; }
 
         public event TelemetryData Data;
 
         public event EventHandler JobStarted;
+
         public event EventHandler JobCancelled;
+
         public event EventHandler JobDelivered;
+
         public event EventHandler Fined;
+
         public event EventHandler Tollgate;
+
         public event EventHandler Ferry;
+
         public event EventHandler Train;
+
         public event EventHandler RefuelStart;
+
         public event EventHandler RefuelEnd;
+
         public event EventHandler RefuelPayed;
 
         public void pause() => _updateTimer.Change(Timeout.Infinite, Timeout.Infinite);
@@ -128,7 +135,7 @@ namespace SCSSdkClient
             // check if sdk is NOT running
             if (!scsTelemetry.SdkActive && !paused)
             {
-                // if so don't check so often the data 
+                // if so don't check so often the data
                 var tsInterval = new TimeSpan(0, 0, 0, 0, DefaultPausedUpdateInterval);
                 _updateTimer.Change(tsInterval.Add(tsInterval), tsInterval);
                 paused = true;
@@ -159,7 +166,6 @@ namespace SCSSdkClient
                     JobStarted?.Invoke(this, new EventArgs());
                 }
             }
-
 
             if (cancelled != scsTelemetry.SpecialEventsValues.JobCancelled)
             {
@@ -246,6 +252,7 @@ namespace SCSSdkClient
             wasPaused = scsTelemetry.Paused;
             lastTime = time;
         }
+
 #if LOGGING
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e) {
             try {

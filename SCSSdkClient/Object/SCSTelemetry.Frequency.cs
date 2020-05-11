@@ -13,7 +13,9 @@ namespace SCSSdkClient.Object
         {
             public Frequency(int i) => Value = i;
 
-            public Frequency() { }
+            public Frequency()
+            {
+            }
 
             /// <summary>
             ///     Represented in number of in-game minutes

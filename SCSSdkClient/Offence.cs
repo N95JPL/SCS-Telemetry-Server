@@ -19,8 +19,6 @@
         /// Illegal_trailer - carries a trailer that is not allowed in this area
         /// Generic         - some other generic fine
 
-
-
         /// <summary>
         ///     No Value from the sdk
         /// </summary>

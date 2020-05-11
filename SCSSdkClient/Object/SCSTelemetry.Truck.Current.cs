@@ -1,4 +1,5 @@
 ﻿#pragma warning disable 1570
+
 namespace SCSSdkClient.Object
 {
     public partial class SCSTelemetry
@@ -105,9 +106,9 @@ namespace SCSSdkClient.Object
                     {
                         /// About: HShifterSlot
                         /// 0 means that no slot is selected
-                        ///  
+                        ///
                         /// About: Gear
-                        ///  
+                        ///
                         /// - > 0  - Forward gears
                         /// -    0  - Neutral
                         /// - < 0  - Reverse gears
@@ -195,12 +196,12 @@ namespace SCSSdkClient.Object
 
                     /// About: Speed
                     /// Uses negative value to represent reverse movement
-                    ///  
+                    ///
                     /// About: CruiseControlSpeed
                     /// Is zero if the cruise control is disabled
-                    ///  
+                    ///
                     /// About: GearDashboard
-                    ///   
+                    ///
                     /// - > 0  - Forward gears
                     /// -    0  - Neutral
                     /// - < 0  - Reverse gears
@@ -214,7 +215,6 @@ namespace SCSSdkClient.Object
                     ///     Display active warnings
                     /// </summary>
                     public Warnings WarningValues { get; internal set; }
-
 
                     /// <summary>
                     ///     Selected gear displayed on dashboard
@@ -286,7 +286,6 @@ namespace SCSSdkClient.Object
                     ///     Is the CruiseControl active?
                     /// </summary>
                     public bool CruiseControl { get; internal set; }
-
 
                     /// <summary>
                     ///     Contains Fuel values
@@ -447,13 +446,13 @@ namespace SCSSdkClient.Object
                 {
                     /// About: Velocity
                     /// Positive velocity corresponds to forward movement
-                    /// 
+                    ///
                     /// About: Steering
                     /// Value is from
                     /// <0.25,0.25>
                     /// range in counterclockwise
                     /// direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
-                    /// 
+                    ///
                     /// Set to zero for non-steered wheels
 
                     /// About: Rotation
@@ -462,7 +461,7 @@ namespace SCSSdkClient.Object
 
                     /// About: Lift
                     /// For use with simple lifted/ non-lifted test or logical visualization of the lifting progress.
-                    ///  
+                    ///
                     /// - Value of 0 corresponds to non-lifted axle.
                     /// - Value of 1 corresponds to fully lifted axle.
                     /// Set to zero or not provided for non-liftable axles.
@@ -494,7 +493,7 @@ namespace SCSSdkClient.Object
                     /// </summary>
                     /// <!----> **INFORMATION** <!---->
                     /// Value is from &lt;0.25,0.25&gt; range in counterclockwise direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
-                    /// 
+                    ///
                     /// Set to zero for non-steered wheels
                     /// <!----> **INFORMATION** <!---->
                     public float[] Steering { get; internal set; }
@@ -512,10 +511,10 @@ namespace SCSSdkClient.Object
                     /// </summary>
                     /// <!----> **INFORMATION** <!---->
                     /// For use with simple lifted/non-lifted test or logical visualization of the lifting progress.
-                    ///  
+                    ///
                     /// Value of 0 corresponds to non-lifted axle.
                     /// Value of 1 corresponds to fully lifted axle.
-                    /// 
+                    ///
                     /// Set to zero or not provided for non-liftable axles.
                     /// <!----> **INFORMATION** <!---->
                     public float[] Lift { get; internal set; }
@@ -525,7 +524,7 @@ namespace SCSSdkClient.Object
                     /// </summary>
                     /// <!----> **INFORMATION** <!---->
                     /// Might have non-linear relation to lift ratio.
-                    /// 
+                    ///
                     /// Set to zero or not provided for non-liftable axles.
                     /// <!----> **INFORMATION** <!---->
                     public float[] LiftOffset { get; internal set; }

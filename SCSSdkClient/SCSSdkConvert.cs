@@ -1,4 +1,4 @@
-﻿// 
+﻿//
 // Ets2SdkClient
 // Ets2SdkDataAlt.cs
 // 22:51
@@ -17,7 +17,6 @@ namespace SCSSdkClient
         private const int StringSize = 64;
         private const int WheelSize = 16;
         private const int Substances = 25;
-
 
         private readonly int[] _offsetAreas =
             {0, 40, 500, 700, 1500, 1640, 2000, 2200, 2300, 4000, 4200, 4300, 4400, 6000};
@@ -41,11 +40,10 @@ namespace SCSSdkClient
             _offsetArea = 0;
             SetOffset();
 
-
             _data = structureDataBytes;
             var retData = new SCSTelemetry();
 
-            #region FIRST ZONE 
+            #region FIRST ZONE
 
             retData.SdkActive = GetBool();
             GetBoolArray(3);
@@ -55,11 +53,9 @@ namespace SCSSdkClient
             retData.SimulationTimestamp = GetULong();
             retData.RenderTimestamp = GetULong();
 
-
-
             NextOffsetArea();
 
-            #endregion
+            #endregion FIRST ZONE
 
             #region SECOND ZONE
 
@@ -81,7 +77,6 @@ namespace SCSSdkClient
             retData.JobValues.CargoValues.UnitCount = GetUint();
             retData.JobValues.PlannedDistanceKm = GetUint();
 
-
             retData.TruckValues.CurrentValues.MotorValues.GearValues.HShifterSlot = GetUint();
             retData.TruckValues.CurrentValues.MotorValues.BrakeValues.RetarderLevel = GetUint();
             retData.TruckValues.CurrentValues.LightsValues.AuxFront = GetUint().ToEnum<AuxLevel>();
@@ -101,7 +96,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion SECOND ZONE
 
             #region THIRD ZONE
 
@@ -115,7 +110,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion THIRD ZONE
 
             #region 4TH ZONE
 
@@ -166,7 +161,6 @@ namespace SCSSdkClient
             retData.TruckValues.CurrentValues.DamageValues.Chassis = GetFloat();
             retData.TruckValues.CurrentValues.DamageValues.WheelsAvg = GetFloat();
 
-
             retData.TruckValues.CurrentValues.DashboardValues.Odometer = GetFloat();
             retData.NavigationValues.NavigationDistance = GetFloat();
             retData.NavigationValues.NavigationTime = GetFloat();
@@ -187,7 +181,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 4TH ZONE
 
             #region 5Th ZONE
 
@@ -231,7 +225,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 5Th ZONE
 
             #region 6TH ZONE
 
@@ -256,7 +250,6 @@ namespace SCSSdkClient
 
             retData.TruckValues.ConstantsValues.WheelsValues.PositionValues = tempPos;
 
-
             retData.TruckValues.CurrentValues.AccelerationValues.LinearVelocity = GetFVector();
             retData.TruckValues.CurrentValues.AccelerationValues.AngularVelocity = GetFVector();
             retData.TruckValues.CurrentValues.AccelerationValues.LinearAcceleration = GetFVector();
@@ -266,26 +259,24 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 6TH ZONE
 
             #region 7TH ZONE
 
             retData.TruckValues.Positioning.CabinOffset = GetFPlacement();
             retData.TruckValues.Positioning.HeadOffset = GetFPlacement();
 
-
             NextOffsetArea();
 
-            #endregion
+            #endregion 7TH ZONE
 
-            #region 8TH ZONE 
+            #region 8TH ZONE
 
             retData.SetTruckPosition(GetDPlacement());
 
-
             NextOffsetArea();
 
-            #endregion
+            #endregion 8TH ZONE
 
             #region 9TH ZONE
 
@@ -334,10 +325,9 @@ namespace SCSSdkClient
             retData.GamePlay.TrainEvent.SourceId = GetString();
             retData.GamePlay.TrainEvent.TargetId = GetString();
 
-
             NextOffsetArea();
 
-            #endregion
+            #endregion 9TH ZONE
 
             #region 10TH ZONE
 
@@ -345,7 +335,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 10TH ZONE
 
             #region 11TH ZONE
 
@@ -358,7 +348,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 11TH ZONE
 
             #region 12TH ZONE
 
@@ -377,7 +367,7 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 12TH ZONE
 
             #region 13TH ZONE
 
@@ -392,14 +382,13 @@ namespace SCSSdkClient
 
             NextOffsetArea();
 
-            #endregion
+            #endregion 13TH ZONE
 
             #region 14TH ZONE
 
             retData.TrailerValues = GetTrailers();
 
-            #endregion
-
+            #endregion 14TH ZONE
 
             return retData;
         }
@@ -479,7 +468,6 @@ namespace SCSSdkClient
             _offset += length;
             return ret;
         }
-
 
         private void NextOffsetArea()
         {
@@ -636,14 +624,14 @@ namespace SCSSdkClient
             trailer.Attached = GetBool();
             SetOffset(3);
 
-            #endregion First Zone 0 - 83
+            #endregion bool Region
 
             #region uint Region
 
             trailer.Wheelvalues.Substance = GetUintArray(WheelSize);
             trailer.WheelsConstant.Count = GetUint();
 
-            #endregion Second Zone 84 - 151
+            #endregion uint Region
 
             #region float Region
 
@@ -659,7 +647,7 @@ namespace SCSSdkClient
 
             trailer.WheelsConstant.Radius = GetFloatArray(WheelSize);
 
-            #endregion Third Zone 152 - 611
+            #endregion float Region
 
             #region floatvector Region
 
@@ -672,13 +660,13 @@ namespace SCSSdkClient
 
             trailer.WheelsConstant.PositionValues = GetFVectorArray(WheelSize);
 
-            #endregion 4Th Zone 612 - 863
+            #endregion floatvector Region
 
             #region double placement Region
 
             trailer.Position = GetDPlacement();
 
-            #endregion 5Th 864 - 911
+            #endregion double placement Region
 
             #region string Region
 
@@ -693,7 +681,7 @@ namespace SCSSdkClient
             trailer.LicensePlateCountry = GetString();
             trailer.LicensePlateCountryId = GetString();
 
-            #endregion 6th Zone 912 - 1551
+            #endregion string Region
 
             return trailer;
         }

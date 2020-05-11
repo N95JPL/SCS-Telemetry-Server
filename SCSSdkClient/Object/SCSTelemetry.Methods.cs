@@ -24,7 +24,6 @@ namespace SCSSdkClient.Object
         internal static DateTime MinutesToDate(int minutes) =>
             new DateTime((long)Math.Abs(minutes) * 10000000 * 60, DateTimeKind.Utc);
 
-
         /// <summary>
         ///     Adds two float vectors
         /// </summary>

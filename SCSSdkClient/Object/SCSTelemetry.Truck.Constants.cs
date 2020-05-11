@@ -150,7 +150,6 @@
                     public ShifterType ShifterTypeValue { get; internal set; }
                 }
 
-
                 /// <summary>
                 ///     Fuel, Adblue, etc.
                 /// </summary>

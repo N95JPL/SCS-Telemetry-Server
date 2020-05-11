@@ -11,7 +11,9 @@ namespace SCSSdkClient.Object
         {
             public Movement(float f) => Value = f;
 
-            public Movement() { }
+            public Movement()
+            {
+            }
 
             /// <summary>
             ///     In-game speed value in m/s

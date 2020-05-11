@@ -60,6 +60,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\SCS-Telemetry-Server.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>167D30DE47C0B6FC6C177776FD4C12C1ABF87CA5</ManifestCertificateThumbprint>
@@ -154,6 +155,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="ValuesCheck" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

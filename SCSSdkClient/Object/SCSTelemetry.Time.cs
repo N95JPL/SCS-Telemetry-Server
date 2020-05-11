@@ -13,7 +13,9 @@ namespace SCSSdkClient.Object
         {
             public Time(uint i) => Value = i;
 
-            public Time() { }
+            public Time()
+            {
+            }
 
             /// <summary>
             ///     Represented in number of in-game minutes

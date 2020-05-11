@@ -22,7 +22,6 @@ namespace SCSSdkClient.Object
             public Transport TrainEvent;
             public Refuel RefuelEvent;
 
-
             public GamePlayEvents()
             {
                 JobCancelled = new Cancelled();
@@ -34,7 +33,6 @@ namespace SCSSdkClient.Object
                 RefuelEvent = new Refuel();
             }
 
-
             public class Cancelled
             {
                 public long Penalty { get; internal set; }
@@ -44,7 +42,6 @@ namespace SCSSdkClient.Object
 
             public class Delivered
             {
-
                 public bool AutoLoaded { get; internal set; }
                 public bool AutoParked { get; internal set; }
                 public float CargoDamage { get; internal set; }  // Typo fixed thanks to Patrick-van-Halm https://github.com/RenCloud/scs-sdk-plugin/pull/32

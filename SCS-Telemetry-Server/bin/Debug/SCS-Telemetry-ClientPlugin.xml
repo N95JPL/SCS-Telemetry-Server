@@ -10,11 +10,11 @@
             </summary>
         </member>
         <member name="F:SCSSdkClient.AuxLevel.Off">
-            About: Values
+             About: Values
             
-            Off     - The lights are off
-            Dimmed  - The lights are in a dimmed state
-            Full    - The lights are in full state
+             Off     - The lights are off
+             Dimmed  - The lights are in a dimmed state
+             Full    - The lights are in full state
             <summary>
                 The Lights are off
             </summary>
@@ -286,28 +286,28 @@
             </summary>
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Control.Input.Steering">
-            About: Steering
-            Note that it is interpreted counterclockwise.
+             About: Steering
+             Note that it is interpreted counterclockwise.
             
-            If the user presses the steer right button on digital input (e.g. keyboard) this value goes immediatelly to -1.0
+             If the user presses the steer right button on digital input (e.g. keyboard) this value goes immediatelly to -1.0
             
-            About: Throttle
-            If the user presses the forward button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
+             About: Throttle
+             If the user presses the forward button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
             
-            About: Brake
-            If the user presses the brake  button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
+             About: Brake
+             If the user presses the brake  button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
             
-            About: Clutch
-            If the user presses the clutch button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
-            <summary>
-                Steering received from input &lt;-1;1&gt;.
-            </summary>
-            <!----> **INFORMATION** <!---->
-            Note that it is interpreted counterclockwise.
+             About: Clutch
+             If the user presses the clutch button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
+             <summary>
+                 Steering received from input &lt;-1;1&gt;.
+             </summary>
+             <!----> **INFORMATION** <!---->
+             Note that it is interpreted counterclockwise.
             
-            If the user presses the steer right button on digital input (e.g. keyboard) this value goes immediatelly to -1.0
-            <!----> **INFORMATION** <!---->
-            <seealso cref="P:SCSSdkClient.Object.SCSTelemetry.Control.Game.Steering" />
+             If the user presses the steer right button on digital input (e.g. keyboard) this value goes immediatelly to -1.0
+             <!----> **INFORMATION** <!---->
+             <seealso cref="P:SCSSdkClient.Object.SCSTelemetry.Control.Game.Steering" />
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Control.Input.Throttle">
             <summary>
@@ -342,29 +342,29 @@
             </summary>
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Control.Game.Steering">
-            About: Steer
-            Note that it is interpreted counterclockwise.
+             About: Steer
+             Note that it is interpreted counterclockwise.
             
-            Accounts for interpolation speeds and simulated counterforces for digital inputs
+             Accounts for interpolation speeds and simulated counterforces for digital inputs
             
-            About: Throttle
-            Accounts for the press attack curve for digital inputs or cruise-control input.
+             About: Throttle
+             Accounts for the press attack curve for digital inputs or cruise-control input.
             
-            About: Brake
-            Accounts for the press attack curve for digital inputs. Does not contain retarder, parking or motor brake.
+             About: Brake
+             Accounts for the press attack curve for digital inputs. Does not contain retarder, parking or motor brake.
             
-            About: Clutch
-            Accounts for the automatic shifting or interpolation of player input.
-            <summary>
-                Steering as used by the simulation &lt;-1;1&gt;
-            </summary>
-            <!----> **INFORMATION** <!---->
-            Note that it is interpreted counterclockwise.
+             About: Clutch
+             Accounts for the automatic shifting or interpolation of player input.
+             <summary>
+                 Steering as used by the simulation &lt;-1;1&gt;
+             </summary>
+             <!----> **INFORMATION** <!---->
+             Note that it is interpreted counterclockwise.
             
-            Accounts for interpolation speeds and simulated counterforces for digital inputs
-            <!----> **INFORMATION** <!---->
-            ///
-            <seealso cref="P:SCSSdkClient.Object.SCSTelemetry.Control.Input.Steering" />
+             Accounts for interpolation speeds and simulated counterforces for digital inputs
+             <!----> **INFORMATION** <!---->
+             ///
+             <seealso cref="P:SCSSdkClient.Object.SCSTelemetry.Control.Input.Steering" />
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Control.Game.Throttle">
             <summary>
@@ -399,19 +399,19 @@
             </summary>
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.SdkActive">
-            About: Currency
-             
-            - ATS use US Dollars as internal currency
-            - ETS2 use Euro as internal currency
-             
-            About: GameVersion
-            Does *NOT* match the patch level of the game
+             About: Currency
             
-            About: Temperatures
-            Aproximated for entire truck, not at the wheel level.
+             - ATS use US Dollars as internal currency
+             - ETS2 use Euro as internal currency
+            
+             About: GameVersion
+             Does *NOT* match the patch level of the game
+            
+             About: Temperatures
+             Aproximated for entire truck, not at the wheel level.
             <summary>
                 Is the sdk active (only reset when game is closed correct, crashes or kills won't set this value)
-            </summary> 
+            </summary>
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Timestamp">
             <summary>
@@ -1001,18 +1001,18 @@
             <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Trailer.Wheels.Steering">
-            <summary>
-                Steering rotation of the wheel in rotations
-            </summary>
-            <!---->
-            **INFORMATION**
-            <!---->
-            Value is from &lt;0.25,0.25&gt; range in counterclockwise direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
+             <summary>
+                 Steering rotation of the wheel in rotations
+             </summary>
+             <!---->
+             **INFORMATION**
+             <!---->
+             Value is from &lt;0.25,0.25&gt; range in counterclockwise direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
             
-            Set to zero for non-steered wheels
-            <!---->
-            **INFORMATION**
-            <!---->
+             Set to zero for non-steered wheels
+             <!---->
+             **INFORMATION**
+             <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Trailer.Wheels.Rotation">
             <summary>
@@ -1645,14 +1645,14 @@
             <!----> **INFORMATION** <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Truck.Current.Wheels.Steering">
-            <summary>
-                Steering rotation of the wheel in rotations
-            </summary>
-            <!----> **INFORMATION** <!---->
-            Value is from &lt;0.25,0.25&gt; range in counterclockwise direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
+             <summary>
+                 Steering rotation of the wheel in rotations
+             </summary>
+             <!----> **INFORMATION** <!---->
+             Value is from &lt;0.25,0.25&gt; range in counterclockwise direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
             
-            Set to zero for non-steered wheels
-            <!----> **INFORMATION** <!---->
+             Set to zero for non-steered wheels
+             <!----> **INFORMATION** <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Truck.Current.Wheels.Rotation">
             <summary>
@@ -1663,27 +1663,27 @@
             <!----> **INFORMATION** <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Truck.Current.Wheels.Lift">
-            <summary>
-                Lift state of the wheel &lt;0;1&gt;
-            </summary>
-            <!----> **INFORMATION** <!---->
-            For use with simple lifted/non-lifted test or logical visualization of the lifting progress.
-             
-            Value of 0 corresponds to non-lifted axle.
-            Value of 1 corresponds to fully lifted axle.
+             <summary>
+                 Lift state of the wheel &lt;0;1&gt;
+             </summary>
+             <!----> **INFORMATION** <!---->
+             For use with simple lifted/non-lifted test or logical visualization of the lifting progress.
             
-            Set to zero or not provided for non-liftable axles.
-            <!----> **INFORMATION** <!---->
+             Value of 0 corresponds to non-lifted axle.
+             Value of 1 corresponds to fully lifted axle.
+            
+             Set to zero or not provided for non-liftable axles.
+             <!----> **INFORMATION** <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Truck.Current.Wheels.LiftOffset">
-            <summary>
-                Vertical displacement of the wheel axle from its normal position in meters as result of lifting.
-            </summary>
-            <!----> **INFORMATION** <!---->
-            Might have non-linear relation to lift ratio.
+             <summary>
+                 Vertical displacement of the wheel axle from its normal position in meters as result of lifting.
+             </summary>
+             <!----> **INFORMATION** <!---->
+             Might have non-linear relation to lift ratio.
             
-            Set to zero or not provided for non-liftable axles.
-            <!----> **INFORMATION** <!---->
+             Set to zero or not provided for non-liftable axles.
+             <!----> **INFORMATION** <!---->
         </member>
         <member name="P:SCSSdkClient.Object.SCSTelemetry.Truck.Current.Wheels.OnGround">
             <summary>
@@ -1852,11 +1852,11 @@
             </summary>
         </member>
         <member name="F:SCSSdkClient.SCSGame.Unknown">
-            About: Values
+             About: Values
             
-            Unknown     - Unknown Game, most of the telemetry data won't work
-            Ets2        - EuroTruckSimulator2 is running
-            Ats         - AmericanTruckSimulator is running
+             Unknown     - Unknown Game, most of the telemetry data won't work
+             Ets2        - EuroTruckSimulator2 is running
+             Ats         - AmericanTruckSimulator is running
             <summary>
                 Unknown Game
             </summary>
@@ -1985,12 +1985,12 @@
             </summary>
         </member>
         <member name="F:SCSSdkClient.ShifterType.Unknown">
-            About: Values
+             About: Values
             
-            Arcade     - Dont' now (some problems)
-            Automatic  - Automatic Shifter
-            Manual     - Manual Shifter (some problems)
-            HShifter   - HShifter
+             Arcade     - Dont' now (some problems)
+             Automatic  - Automatic Shifter
+             Manual     - Manual Shifter (some problems)
+             HShifter   - HShifter
         </member>
         <member name="F:SCSSdkClient.ShifterType.Arcade">
             <summary>

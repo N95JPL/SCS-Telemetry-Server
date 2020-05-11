@@ -45,8 +45,6 @@ namespace SCSSdkClient.Object
             /// </summary>
             public uint PlannedDistanceKm { get; internal set; }
 
-
-
             /// <summary>
             ///     Cargo values of an job
             /// </summary>

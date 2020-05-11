@@ -6,7 +6,7 @@
     public enum SCSGame
     {
         /// About: Values
-        /// 
+        ///
         /// Unknown     - Unknown Game, most of the telemetry data won't work
         /// Ets2        - EuroTruckSimulator2 is running
         /// Ats         - AmericanTruckSimulator is running

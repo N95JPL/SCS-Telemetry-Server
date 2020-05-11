@@ -42,7 +42,6 @@ namespace SCSSdkClient
                     continue;
                 }
 
-
                 while (cha == '\n' || cha == '\t')
                 {
                     index++;

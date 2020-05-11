@@ -77,14 +77,12 @@ namespace SCSSdkClient.Object
             public string LicensePlateCountry { get; internal set; }
             public string LicensePlateCountryId { get; internal set; }
 
-
             public class Damage
             {
                 public float Cargo { get; internal set; }
                 public float Wheels { get; internal set; }
                 public float Chassis { get; internal set; }
             }
-
 
             /// <summary>
             ///     States of the Wheels
@@ -99,7 +97,7 @@ namespace SCSSdkClient.Object
                 /// <0.25, 0.25>
                 /// range in counterclockwise direction
                 /// when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
-                /// 
+                ///
                 /// Set to zero for non-steered wheels
 
                 /// About: Rotation
@@ -108,7 +106,7 @@ namespace SCSSdkClient.Object
 
                 /// About: Lift
                 /// For use with simple lifted/ non-lifted test or logical visualization of the lifting progress.
-                ///  
+                ///
                 /// - Value of 0 corresponds to non-lifted axle.
                 /// - Value of 1 corresponds to fully lifted axle.
                 /// Set to zero or not provided for non-liftable axles.
@@ -146,7 +144,7 @@ namespace SCSSdkClient.Object
                 /// **INFORMATION**
                 /// <!---->
                 /// Value is from &lt;0.25,0.25&gt; range in counterclockwise direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
-                /// 
+                ///
                 /// Set to zero for non-steered wheels
                 /// <!---->
                 /// **INFORMATION**
@@ -173,7 +171,6 @@ namespace SCSSdkClient.Object
                 public float[] Lift { get; internal set; }
                 public float[] LiftOffset { get; internal set; }
             }
-
 
             public class Acceleration
             {

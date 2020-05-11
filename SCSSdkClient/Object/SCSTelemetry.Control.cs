@@ -28,7 +28,6 @@ namespace SCSSdkClient.Object
             /// </summary>
             public Game GameValues { get; internal set; }
 
-
             /// <inheritdoc />
             public override string ToString() =>
                 $"Input Values:\n\t{InputValues.ToString().StringFormater()}\nGame Values:\n\t{GameValues.ToString().StringFormater()}";
@@ -40,15 +39,15 @@ namespace SCSSdkClient.Object
             {
                 /// About: Steering
                 /// Note that it is interpreted counterclockwise.
-                /// 
+                ///
                 /// If the user presses the steer right button on digital input (e.g. keyboard) this value goes immediatelly to -1.0
-                /// 
+                ///
                 /// About: Throttle
                 /// If the user presses the forward button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
-                /// 
+                ///
                 /// About: Brake
                 /// If the user presses the brake  button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
-                /// 
+                ///
                 /// About: Clutch
                 /// If the user presses the clutch button on digital input (e.g. keyboard) this value goes immediatelly to 1.0
 
@@ -57,7 +56,7 @@ namespace SCSSdkClient.Object
                 /// </summary>
                 /// <!----> **INFORMATION** <!---->
                 /// Note that it is interpreted counterclockwise.
-                /// 
+                ///
                 /// If the user presses the steer right button on digital input (e.g. keyboard) this value goes immediatelly to -1.0
                 /// <!----> **INFORMATION** <!---->
                 /// <seealso cref="Game.Steering" />
@@ -98,15 +97,15 @@ namespace SCSSdkClient.Object
             {
                 /// About: Steer
                 /// Note that it is interpreted counterclockwise.
-                /// 
+                ///
                 /// Accounts for interpolation speeds and simulated counterforces for digital inputs
-                /// 
+                ///
                 /// About: Throttle
                 /// Accounts for the press attack curve for digital inputs or cruise-control input.
-                /// 
+                ///
                 /// About: Brake
                 /// Accounts for the press attack curve for digital inputs. Does not contain retarder, parking or motor brake.
-                /// 
+                ///
                 /// About: Clutch
                 /// Accounts for the automatic shifting or interpolation of player input.
 
@@ -115,7 +114,7 @@ namespace SCSSdkClient.Object
                 /// </summary>
                 /// <!----> **INFORMATION** <!---->
                 /// Note that it is interpreted counterclockwise.
-                /// 
+                ///
                 /// Accounts for interpolation speeds and simulated counterforces for digital inputs
                 /// <!----> **INFORMATION** <!---->
                 /// ///

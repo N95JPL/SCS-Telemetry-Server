@@ -4,19 +4,20 @@ using System.IO.Ports;
 
 namespace SCSTelemetryServer
 {
-    class Server
+    internal class Server
     {
         public string ComPort;
-        SerialPort _port;
+        private SerialPort _port;
 
-        RadioChecker Radios = new RadioChecker();
-        Coordinates Coord = new Coordinates();
-        TruckVariables Truck = new TruckVariables();
-        Game Game = new Game();
+        private RadioChecker Radios = new RadioChecker();
+        private Coordinates Coord = new Coordinates();
+        private TruckVariables Truck = new TruckVariables();
+        private Game Game = new Game();
+
         public void serverManager(Object obj)
         {
-
         }
+
         public void portManager(Object obj)
         {
             if (ComPort == null)
@@ -42,9 +43,9 @@ namespace SCSTelemetryServer
                 string msg = Truck.Constant.Model + ";";
                 _port.Write(msg);
                 //MessageBox.Show(msg);
-
             }
         }
+
         public List<string> GetAllPorts()
         {
             List<String> allPorts = new List<String>();

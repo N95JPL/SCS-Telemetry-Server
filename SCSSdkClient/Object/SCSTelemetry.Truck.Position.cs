@@ -63,7 +63,6 @@ namespace SCSSdkClient.Object
             /// </summary>
             public FPlacement CabinOffset { get; internal set; }
 
-
             internal DPlacement TruckPosition { get; set; }
 
             /// <summary>

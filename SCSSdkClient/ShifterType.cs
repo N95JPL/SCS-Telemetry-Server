@@ -6,7 +6,7 @@
     public enum ShifterType
     {
         /// About: Values
-        /// 
+        ///
         /// Arcade     - Dont' now (some problems)
         /// Automatic  - Automatic Shifter
         /// Manual     - Manual Shifter (some problems)

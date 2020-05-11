@@ -85,28 +85,100 @@ namespace SCSTelemetryServer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int VersionMajor {
+        [global::System.Configuration.DefaultSettingValueAttribute("0.1.0")]
+        public string Version {
             get {
-                return ((int)(this["VersionMajor"]));
+                return ((string)(this["Version"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Steam\\steamapps\\common\\Euro Truck Simulator 2")]
+        public string DirETS2 {
+            get {
+                return ((string)(this["DirETS2"]));
+            }
+            set {
+                this["DirETS2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Steam\\steamapps\\common\\American Truck Simulator")]
+        public string DirATS {
+            get {
+                return ((string)(this["DirATS"]));
+            }
+            set {
+                this["DirATS"] = value;
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int VersionMinor {
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\bin\\win_x86\\plugins\\")]
+        public string Pluginx84 {
             get {
-                return ((int)(this["VersionMinor"]));
+                return ((string)(this["Pluginx84"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int VersionPatch {
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\bin\\win_x64\\plugins\\")]
+        public string Pluginx64 {
             get {
-                return ((int)(this["VersionPatch"]));
+                return ((string)(this["Pluginx64"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("14400")]
+        public string SerialBaud {
+            get {
+                return ((string)(this["SerialBaud"]));
+            }
+            set {
+                this["SerialBaud"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1711")]
+        public int WebPort {
+            get {
+                return ((int)(this["WebPort"]));
+            }
+            set {
+                this["WebPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("COM3")]
+        public string SerialCOM {
+            get {
+                return ((string)(this["SerialCOM"]));
+            }
+            set {
+                this["SerialCOM"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        public string WebIP {
+            get {
+                return ((string)(this["WebIP"]));
+            }
+            set {
+                this["WebIP"] = value;
             }
         }
     }

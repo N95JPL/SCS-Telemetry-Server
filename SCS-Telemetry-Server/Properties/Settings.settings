@@ -17,14 +17,32 @@
     <Setting Name="EnableRadio" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="VersionMajor" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="Version" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0.1.0</Value>
     </Setting>
-    <Setting Name="VersionMinor" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">1</Value>
+    <Setting Name="DirETS2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulator 2</Value>
     </Setting>
-    <Setting Name="VersionPatch" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="DirATS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\Steam\steamapps\common\American Truck Simulator</Value>
+    </Setting>
+    <Setting Name="Pluginx84" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\bin\win_x86\plugins\</Value>
+    </Setting>
+    <Setting Name="Pluginx64" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\bin\win_x64\plugins\</Value>
+    </Setting>
+    <Setting Name="SerialBaud" Type="System.String" Scope="User">
+      <Value Profile="(Default)">14400</Value>
+    </Setting>
+    <Setting Name="WebPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1711</Value>
+    </Setting>
+    <Setting Name="SerialCOM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM3</Value>
+    </Setting>
+    <Setting Name="WebIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -22,3 +22,4 @@ D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.cs
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.dll
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.pdb
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.xml
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.xml

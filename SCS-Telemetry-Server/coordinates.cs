@@ -17,11 +17,13 @@ namespace SCSTelemetryServer
                 default: return input.First().ToString().ToUpper() + input.Substring(1);
             }
         }
+
         public partial class Cities
         {
             [JsonProperty("citiesList")]
             public CitiesList[] CitiesList { get; set; }
         }
+
         public partial class CitiesList
         {
             [JsonProperty("gameName")]
@@ -42,6 +44,7 @@ namespace SCSTelemetryServer
             [JsonProperty("z")]
             public string Z { get; set; }
         }
+
         /*public float x { get; set; }
         public float y { get; set; }
         public float z { get; set; }
@@ -53,7 +56,6 @@ namespace SCSTelemetryServer
         public double Z { get; set; }
         public string currentCity { get; set; }
         public string currentCountry { get; set; }
-
 
         public void getDistance(Object obj)
         {

@@ -13,22 +13,23 @@ namespace SCSTelemetryServer
     public partial class Main : Form
     {
         public SCSSdkTelemetry Telemetry;
-        RadioChecker Radios = new RadioChecker();
-        Coordinates Coord = new Coordinates();
-        TruckVariables Truck = new TruckVariables();
-        Game Game = new Game();
-        Server Server = new Server();
+        private RadioChecker Radios = new RadioChecker();
+        private Coordinates Coord = new Coordinates();
+        private TruckVariables Truck = new TruckVariables();
+        private Game Game = new Game();
+        private Server Server = new Server();
 
+        public SCSTelemetry MainData;
         public string viewName = "Driving";
         public string JSONmsg;
         public string ComPort = "0";
-        string ScreenView = "Driving";
-        SerialPort _port;
+        public string ScreenView = "Driving";
+        public SerialPort _port;
 
-        static System.Threading.Timer RadioTimer;
-        static System.Threading.Timer LocationTimer;
-        static System.Threading.Timer UITimer;
-        static Thread PortManager;
+        private static System.Threading.Timer RadioTimer;
+        private static System.Threading.Timer LocationTimer;
+        private static System.Threading.Timer UITimer;
+        private static Thread PortManager;
 
         public int UpdateInterval { get; set; }
 
@@ -48,7 +49,6 @@ namespace SCSTelemetryServer
             //Telemetry.RefuelStart += TelemetryRefuel;
             //Telemetry.RefuelEnd += TelemetryRefuelEnd;
             //Telemetry.RefuelPayed += TelemetryRefuelPayed;
-
             if (Telemetry.Error != null)
             {
                 MessageBox.Show("An error has occured!! OOPS!");
@@ -108,13 +108,9 @@ namespace SCSTelemetryServer
                     Invoke(new TelemetryData(Telemetry_Data), data, updated);
                     return;
                 }
+                MainData = data;
                 UpdateInterval = Telemetry.UpdateInterval;
-                Truck.Constant.RegPlate = data.TruckValues.ConstantsValues.LicensePlate;
-                Truck.Constant.RegPlateCountryID = data.TruckValues.ConstantsValues.LicensePlateCountryId;
-                Truck.Constant.Manufacture = data.TruckValues.ConstantsValues.Brand;
-                Truck.Constant.Model = data.TruckValues.ConstantsValues.Name;
-                Truck.Constant.FuelCap = (int)data.TruckValues.ConstantsValues.CapacityValues.Fuel;
-                Truck.Constant.Transmission = data.TruckValues.ConstantsValues.MotorValues.ShifterTypeValue.ToString();
+                
                 //Truck.OnJob = data.SpecialEventsValues.OnJob.ToString();
 
                 //Truck Warnings
@@ -181,12 +177,14 @@ namespace SCSTelemetryServer
                                  "Update Int.: " + UpdateInterval + "m\n\n" +
                                  "COM Port: " + ComPort;
             }
+
             catch (Exception ex)
             {
                 // ignored atm i found no proper way to shut the telemetry down and down call this anymore when this or another thing is already disposed
                 Console.WriteLine("Telemetry was closed: " + ex);
             }
         }
+
         private void setUIValues(Object obj)
         {
             try
@@ -260,6 +258,7 @@ namespace SCSTelemetryServer
                 PortManager.Abort();
             }
         }
+
         public void portManager(object obj)
         {
             while (true)
@@ -287,7 +286,6 @@ namespace SCSTelemetryServer
                         Console.WriteLine("Message: " + Message);
                         if (Message == "A\r")
                         {
-
                             String Gear = "N";
                             decimal FuelP = (decimal)Truck.Current.Fuel / (decimal)Truck.Constant.FuelCap;
                             FuelP = decimal.Round(FuelP, 3, MidpointRounding.AwayFromZero);
@@ -364,7 +362,6 @@ namespace SCSTelemetryServer
                                 _port.Close();
                                 Console.WriteLine("Exception: ");
                                 ComPort = "0";
-
                             }
                         }
                         else if (Message == "LEFT\r")
@@ -383,6 +380,7 @@ namespace SCSTelemetryServer
                 }
             }
         }
+
         public List<string> GetAllPorts()
         {
             List<String> allPorts = new List<String>();

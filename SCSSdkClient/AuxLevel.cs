@@ -6,7 +6,7 @@
     public enum AuxLevel
     {
         /// About: Values
-        /// 
+        ///
         /// Off     - The lights are off
         /// Dimmed  - The lights are in a dimmed state
         /// Full    - The lights are in full state

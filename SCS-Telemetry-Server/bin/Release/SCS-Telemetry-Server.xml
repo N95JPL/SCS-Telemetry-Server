@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SCS-Telemetry-Server</name>
+    </assembly>
+    <members>
+        <member name="T:SCSTelemetryServer.Game">
+            <summary>
+            Holds game values
+            </summary>
+        </member>
+        <member name="P:SCSTelemetryServer.Game.Values">
+            <summary>
+            Internal class to set Time/Day/WeekDay
+            </summary>
+        </member>
+        <member name="M:SCSTelemetryServer.Game.#ctor">
+            <summary>
+            To be accessed by other files
+            </summary>
+        </member>
+        <member name="T:SCSTelemetryServer.Game.GameValues">
+            <summary>
+            All game values
+            </summary>
+        </member>
+        <member name="T:SCSTelemetryServer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SCSTelemetryServer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SCSTelemetryServer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="F:SCSTelemetryServer.Main.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SCSTelemetryServer.Main.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SCSTelemetryServer.Main.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SCSTelemetryServer.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>

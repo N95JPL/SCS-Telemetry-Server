@@ -30,21 +30,20 @@ namespace SCSSdkClient.Object
             GamePlay = new GamePlayEvents();
         }
 
-
         /// About: Currency
-        ///  
+        ///
         /// - ATS use US Dollars as internal currency
         /// - ETS2 use Euro as internal currency
-        ///  
+        ///
         /// About: GameVersion
         /// Does *NOT* match the patch level of the game
-        /// 
+        ///
         /// About: Temperatures
         /// Aproximated for entire truck, not at the wheel level.
 
         /// <summary>
         ///     Is the sdk active (only reset when game is closed correct, crashes or kills won't set this value)
-        /// </summary> 
+        /// </summary>
         public bool SdkActive { get; internal set; }
 
         /// <summary>
@@ -111,7 +110,6 @@ namespace SCSSdkClient.Object
         /// Does NOT match the patch level of the game.
         /// <!----> **INFORMATION** <!---->
         public Version GameVersion { get; internal set; }
-
 
         /// <summary>
         ///     Version/Revision of the dll
