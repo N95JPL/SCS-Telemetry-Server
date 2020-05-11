@@ -1,0 +1,259 @@
+Game Values (V.1.10.5)
+│    ├── Telemetry Timestamp (<mark>not the in-game time</mark>, only for usage in code, see documentation for more information #todo add link) (<mark>now ulong</mark>)
+│    ├── <ins>Simulation</ins> Timestamp
+│    ├── <ins>Render</ins> Timestamp
+│    ├── Paused, game state
+│    ├── SCSGame identifier as enum, currently ets2/ats/unknown
+│    ├── GameVersion and Game Telemetry Version (major.minor)
+│    ├── Dll version (usage in code)
+│    ├── TelemetryVersion
+│    ├── Substances
+│    ├── <strong>Common Values</strong>:
+│    │    ├── Scale
+│    │    ├── Game Time (Time object with in-game minutes and datetime object)
+│    │    ├── NextRestStop (Frequency object, more a time span)
+│    │    └── NextRestStopTime (Specific date, calculated)
+│    ├── <strong>Truck Values (Contains 2 big parts, and a small one)</strong>:
+│    │    ├── <strong>Constants/Configs (Values that barely change)</strong>:
+│    │    │    ├── <strong>Motor Values</strong>:
+│    │    │    │    ├── Forward Gear Count
+│    │    │    │    ├── Reverse Gear Count
+│    │    │    │    ├── Retarder Step Count
+│    │    │    │    ├── Selector Count
+│    │    │    │    ├── Engine RPM Max
+│    │    │    │    ├── Differential Ration
+│    │    │    │    ├── Gear Ratios Forward
+│    │    │    │    ├── Gear Ratios Reverse
+│    │    │    │    ├── Shifter Type Value (Enum)
+│    │    │    │    ├── SlotGear
+│    │    │    │    ├── SlotHandlePosition
+│    │    │    │    └── SlotSelectors
+│    │    │    ├── <strong>Capacity Values</strong>:
+│    │    │    │    ├── Fuel
+│    │    │    │    └── Adblue
+│    │    │    ├── <strong>Warning Factors</strong>:
+│    │    │    │    ├── Fuel
+│    │    │    │    ├── Adblue
+│    │    │    │    ├── Air Pressure
+│    │    │    │    ├── Air Pressure Emergency
+│    │    │    │    ├── Oil Pressure
+│    │    │    │    ├── Water Temperature
+│    │    │    │    └── Battery Voltage
+│    │    │    ├── <strong>Wheels</strong>:
+│    │    │    │    ├── Count
+│    │    │    │    ├── Radius
+│    │    │    │    ├── Simulated
+│    │    │    │    ├── Powered
+│    │    │    │    ├── Liftable
+│    │    │    │    └── Steerable
+│    │    │    ├── Brand Id (code)
+│    │    │    ├── Brand
+│    │    │    ├── Id (code)
+│    │    │    ├── Name
+│    │    │    ├── LicensePlate (1.14/1.01/1.35)
+│    │    │    ├── LicensePlateCountryId (1.14/1.01/1.35)
+│    │    │    └── LicensePlateCountry (1.14/1.01/1.35)
+│    │    ├── <strong>Current Values (Values that change a lot)</strong>:
+│    │    │    ├── Electric Enabled
+│    │    │    ├── Engine Enabled
+│    │    │    ├── <strong>Motor Values</strong>:
+│    │    │    │    ├── <strong>Gear Values</strong>:
+│    │    │    │    │    ├── HShifterSlot
+│    │    │    │    │    ├── Selected
+│    │    │    │    │    └── HShifterSelector
+│    │    │    │    └── <strong>Brake Values</strong>:
+│    │    │    │         ├── RetarderLevel
+│    │    │    │         ├── Air Pressure
+│    │    │    │         ├── Temperature
+│    │    │    │         ├── Parking Brake
+│    │    │    │         └── Motor Brake
+│    │    │    ├── Dashboard</strong>:
+│    │    │    │    ├── <strong>Fuel Values</strong>:
+│    │    │    │    │    ├── Amount
+│    │    │    │    │    ├── Average Consumption
+│    │    │    │    │    └── Range (estimated range with current amount of fuel)
+│    │    │    │    ├── <strong>Warnings</strong>:
+│    │    │    │    │    ├── Air Pressure
+│    │    │    │    │    ├── Air Pressure Emergency
+│    │    │    │    │    ├── Fuel warning
+│    │    │    │    │    ├── Adblue
+│    │    │    │    │    ├── oil pressure
+│    │    │    │    │    ├── adblue
+│    │    │    │    │    ├── water temperature
+│    │    │    │    │    └── battery voltage
+│    │    │    │    ├── Gear Dashboards
+│    │    │    │    ├── Speed (m/s,km/h,mph)
+│    │    │    │    ├── CruiseControlSpeed (m/s,km/h,mph)
+│    │    │    │    ├── Adblue amount
+│    │    │    │    ├── Oil Pressure
+│    │    │    │    ├── Oil Temperature
+│    │    │    │    ├── Water Temperature
+│    │    │    │    ├── BatteryVoltage
+│    │    │    │    ├── RPM
+│    │    │    │    ├── Odometer
+│    │    │    │    ├── Wipers
+│    │    │    │    └── Cruise Control ("special field", same like `CruiseControlspeed == 0`)
+│    │    │    ├── <strong>Acceleration</strong>:
+│    │    │    │    ├── Linear Velocity
+│    │    │    │    ├── Angular Velocity
+│    │    │    │    ├── Linear Acceleration
+│    │    │    │    ├── Angular Acceleration
+│    │    │    │    ├── Cabin Angular Velocity
+│    │    │    │    └── Cabin Angular Acceleration
+│    │    │    ├── <strong>Lights</strong>:
+│    │    │    │    ├── Aux Front (enum for 3 states)
+│    │    │    │    ├── Aux Roof (enum for 3 states)
+│    │    │    │    ├── Dashboard Backlight
+│    │    │    │    ├── Blinker Left Active
+│    │    │    │    ├── Blinker Right Active
+│    │    │    │    ├── Blinker Left On
+│    │    │    │    ├── Blinker Right On
+│    │    │    │    ├── Parking
+│    │    │    │    ├── Beam Low
+│    │    │    │    ├── Beam High
+│    │    │    │    ├── Beacon
+│    │    │    │    ├── Brake
+│    │    │    │    └── Reverse
+│    │    │    ├── <strong>Wheels</strong>:
+│    │    │    │    ├── Substance
+│    │    │    │    ├── SuspDeflection
+│    │    │    │    ├── Velocity
+│    │    │    │    ├── Steering
+│    │    │    │    ├── Rotation
+│    │    │    │    ├── Lift
+│    │    │    │    ├── Lift Offset
+│    │    │    │    ├── on ground
+│    │    │    │    └── position
+│    │    │    ├── <strong>Damage</strong>:
+│    │    │    │    ├── Engine
+│    │    │    │    ├── Transmission
+│    │    │    │    ├── Cabin
+│    │    │    │    ├── chassis
+│    │    │    │    └── wheels (avg. of all wheels)
+│    │    │    └── Position (position in world space with position and orientation)
+│    │    └── <strong>Positioning</strong>:
+│    │         ├── Cabin (vehicle space)
+│    │         ├── Head (cabin space)
+│    │         ├── Hook (vehicle space)
+│    │         ├── Head Offset
+│    │         ├── Cabin Offset
+│    │         └── Contains "more fields" see at the bottom of the list
+│    ├── <strong>Trailer Values (will be set to 0, false, etc. if you have no trailer, while on job or with trailer ownership detached wont reset the values)[0-9] (array starting with 1.14/1.01 so 0 for 1 trailer or version lower than that)</strong>:
+│    │    ├── Attached
+│    │    ├── Hook
+│    │    ├── Position
+│    │    ├── <strong>Wheel Values</strong>:
+│    │    │    ├── Substance
+│    │    │    ├── SuspDeflection
+│    │    │    ├── Velocity
+│    │    │    ├── Steering
+│    │    │    ├── Rotation
+│    │    │    ├── On Ground
+│    │    │    ├── Lift
+│    │    │    └── LiftOffset
+│    │    ├── <strong>WheelsConstants</strong>:
+│    │    │    ├── Count
+│    │    │    ├── Radius
+│    │    │    ├── Simulated
+│    │    │    ├── Powered
+│    │    │    ├── Liftable
+│    │    │    └── Steerable
+│    │    ├── <strong>Acceleration</strong>:
+│    │    │    ├── Linear Velocity
+│    │    │    ├── Angular Velocity
+│    │    │    ├── Linear Acceleration
+│    │    │    └── Angular Acceleration
+│    │    ├── <strong>DamageValues</strong>:
+│    │    │    ├── Cargo (1.14/1.01/1.35)
+│    │    │    ├── Wheels
+│    │    │    └── Chassis
+│    │    ├── Chassis (code)
+│    │    ├── Id (code)
+│    │    ├── Name
+│    │    ├── CargoAccessoryId
+│    │    ├── BodyType (1.14/1.01/1.35)
+│    │    ├── BrandId (1.14/1.01/1.35)
+│    │    ├── Brand (1.14/1.01/1.35)
+│    │    ├── Name (1.14/1.01/1.35)
+│    │    ├── ChainType (1.14/1.01/1.35)
+│    │    ├── LicensePlate (1.14/1.01/1.35)
+│    │    ├── LicensePlateCountryId (1.14/1.01/1.35)
+│    │    └── LicensePlateCountry (1.14/1.01/1.35)
+│    ├── <strong>Job Values(will be reset after the job finished flag is disappeared)</strong>:
+│    │    ├── Delivery Time (time object -> in-game minutes and datetime object)
+│    │    ├── Remaining Delivery Time (calculated)
+│    │    ├── CargoLoaded (1.14/1.01/1.35)
+│    │    ├── SpecialJob (1.14/1.01/1.35)
+│    │    ├── Market (1.14/1.01/1.35)
+│    │    ├── City Destination Id (code)
+│    │    ├── City Destination
+│    │    ├── Company Destination Id (code)
+│    │    ├── Company Destination
+│    │    ├── City Source Id (code)
+│    │    ├── City Source
+│    │    ├── Company Source Id (code)
+│    │    ├── Company Source
+│    │    ├── Income
+│    │    ├── Planned Distance Km (1.15/1.02/1.36)
+│    │    └── <strong>Cargo Values</strong>:
+│    │         ├── Mass
+│    │         ├── Name (code)
+│    │         ├── Id (1.14/1.01/1.35)
+│    │         ├── UnitCount (1.14/1.01/1.35)
+│    │         ├── UnitMass (1.14/1.01/1.35)
+│    │         └── CargoDamage (1.14/1.01/1.35)
+│    ├── <strong>Control Values</strong>:
+│    │    ├── <strong>User Input</strong>:
+│    │    │    ├── Steering
+│    │    │    ├── Throttle
+│    │    │    ├── Brake
+│    │    │    └── Clutch
+│    │    └── <strong>Game Values</strong>:
+│    │         ├── Steering
+│    │         ├── Throttle
+│    │         ├── Brake
+│    │         └── Clutch
+│    ├── <strong>Navigation Values</strong>:
+│    │    ├── Navigation Distance
+│    │    ├── Navigation Time
+│    │    └── Speed Limit
+│    ├── <strong>SpecialEvents</strong>:
+│    │    ├── On Job
+│    │    ├── Job Cancelled (1.14/1.01/1.35) (may not work atm?)
+│    │    ├── Job Delivered (1.14/1.01/1.35)
+│    │    ├── Fined (1.14/1.01/1.35)
+│    │    ├── Tollgate (1.14/1.01/1.35)
+│    │    ├── Ferry (1.14/1.01/1.35)
+│    │    ├── Train (1.14/1.01/1.35)
+│    │    ├── Refuel Start
+│    │    ├── Refuel End (Fired on refuel stop)
+│    │    └── Refuel Payed (Fired on refuel end/engine start)
+│    └── <strong>GameplayEvents (1.14/1.01/1.35)</strong>:
+│         ├── <strong>Refuel</strong>:
+│         │    └── Amount (No Version note)  (see changelog update 10.4 for some notes to that)
+│         ├── <strong>Cancelled</strong>:
+│         │    ├── Started (This value could be wrong if profile is closed or game is restarted, see changelog update 10.4)
+│         │    ├── Finished
+│         │    └── Penalty
+│         ├── <strong>Delivered</strong>:
+│         │    ├── Started (This value could be wrong if profile is closed or game is restarted, see changelog update 10.4)
+│         │    ├── Finished>
+│         │    ├── StartedBackup (See changelog update 10.4 and documentation for notes to that property)
+│         │    ├── AutoLoaded
+│         │    ├── AutoParked
+│         │    ├── CargoDamage
+│         │    ├── DeliveryTime
+│         │    ├── DistanceKm
+│         │    ├── EarnedXp
+│         │    └── Revenue
+│         ├── <strong>Fined</strong>:
+│         │    ├── Amount
+│         │    └── Offence
+│         ├── <strong>Tollgate</strong>:
+│         │    └── PayAmount
+│         └── <strong>Transport</strong>:
+│              ├── PayAmount
+│              ├── SourceId
+│              ├── SourceName
+│              ├── TargetId
+│              └── TargedName  
