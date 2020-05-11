@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace ArduinoSCSTelemetry
+namespace SCSTelemetryServer
 {
     class Server
     {
@@ -40,7 +36,7 @@ namespace ArduinoSCSTelemetry
                 //MessageBox.Show("COM OPEN!");
                 //string Day = Game.Values.WeekDay;
                 //string Time = Game.Values.Time;
-                string msg = Truck.Constant.Model+";";
+                string msg = Truck.Constant.Model + ";";
                 _port.Write(msg);
                 //MessageBox.Show(msg);
 

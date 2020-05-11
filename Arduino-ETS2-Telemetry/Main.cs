@@ -1,14 +1,14 @@
-﻿using SCSSdkClient;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using SCSSdkClient;
 using SCSSdkClient.Object;
 using System;
-using System.Windows.Forms;
-using System.Threading;
-using System.IO.Ports;
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+using System.IO.Ports;
+using System.Threading;
+using System.Windows.Forms;
 
-namespace ArduinoSCSTelemetry
+namespace SCSTelemetryServer
 {
     public partial class Main : Form
     {
@@ -29,7 +29,7 @@ namespace ArduinoSCSTelemetry
         static System.Threading.Timer LocationTimer;
         static System.Threading.Timer UITimer;
         static Thread PortManager;
-        
+
         public int UpdateInterval { get; set; }
 
         public Main()
@@ -38,13 +38,13 @@ namespace ArduinoSCSTelemetry
             //PortManager = new Thread(new ThreadStart(portManager));
             Telemetry = new SCSSdkTelemetry();
             Telemetry.Data += Telemetry_Data;
-/*            Telemetry.JobStarted += TelemetryOnJobStarted;
-            Telemetry.JobCancelled += TelemetryJobCancelled;
-            Telemetry.JobDelivered += TelemetryJobDelivered;
-            Telemetry.Fined += TelemetryFined;
-            Telemetry.Tollgate += TelemetryTollgate;
-            Telemetry.Ferry += TelemetryFerry;
-            Telemetry.Train += TelemetryTrain;*/
+            /*            Telemetry.JobStarted += TelemetryOnJobStarted;
+                        Telemetry.JobCancelled += TelemetryJobCancelled;
+                        Telemetry.JobDelivered += TelemetryJobDelivered;
+                        Telemetry.Fined += TelemetryFined;
+                        Telemetry.Tollgate += TelemetryTollgate;
+                        Telemetry.Ferry += TelemetryFerry;
+                        Telemetry.Train += TelemetryTrain;*/
             //Telemetry.RefuelStart += TelemetryRefuel;
             //Telemetry.RefuelEnd += TelemetryRefuelEnd;
             //Telemetry.RefuelPayed += TelemetryRefuelPayed;
@@ -71,33 +71,33 @@ namespace ArduinoSCSTelemetry
             InitializeComponent();
         }
 
-/*        private void TelemetryOnJobStarted(object sender, EventArgs e) =>
-            MessageBox.Show("Just started job OR loaded game with active.");
+        /*        private void TelemetryOnJobStarted(object sender, EventArgs e) =>
+                    MessageBox.Show("Just started job OR loaded game with active.");
 
-        private void TelemetryJobCancelled(object sender, EventArgs e) =>
-            MessageBox.Show("Job Cancelled");
+                private void TelemetryJobCancelled(object sender, EventArgs e) =>
+                    MessageBox.Show("Job Cancelled");
 
-        private void TelemetryJobDelivered(object sender, EventArgs e) =>
-            MessageBox.Show("Job Delivered");
+                private void TelemetryJobDelivered(object sender, EventArgs e) =>
+                    MessageBox.Show("Job Delivered");
 
-        private void TelemetryFined(object sender, EventArgs e) =>
-            MessageBox.Show("Fined");
+                private void TelemetryFined(object sender, EventArgs e) =>
+                    MessageBox.Show("Fined");
 
-        private void TelemetryTollgate(object sender, EventArgs e) =>
-            MessageBox.Show("Tollgate");
+                private void TelemetryTollgate(object sender, EventArgs e) =>
+                    MessageBox.Show("Tollgate");
 
-        private void TelemetryFerry(object sender, EventArgs e) =>
-            MessageBox.Show("Ferry");
+                private void TelemetryFerry(object sender, EventArgs e) =>
+                    MessageBox.Show("Ferry");
 
-        private void TelemetryTrain(object sender, EventArgs e) =>
-            MessageBox.Show("Train");*/
+                private void TelemetryTrain(object sender, EventArgs e) =>
+                    MessageBox.Show("Train");*/
         //private void TelemetryRefuel(object sender, EventArgs e) => rtb_fuel.Invoke((MethodInvoker)(() => rtb_fuel.BackColor = Color.Green));
         //private void TelemetryRefuelEnd(object sender, EventArgs e) => rtb_fuel.Invoke((MethodInvoker)(() => rtb_fuel.BackColor = Color.Red));
 
-/*        private void TelemetryRefuelPayed(object sender, EventArgs e)
-        {
-            MessageBox.Show("Fuel Payed");
-        }*/
+        /*        private void TelemetryRefuelPayed(object sender, EventArgs e)
+                {
+                    MessageBox.Show("Fuel Payed");
+                }*/
 
         public void Telemetry_Data(SCSTelemetry data, bool updated)
         {
@@ -165,7 +165,7 @@ namespace ArduinoSCSTelemetry
                 //Format Game Values
                 Game.Values.Time = Game.Values.Time.Remove(0, 11);
                 Game.Values.Time = Game.Values.Time.Remove(5, 3);
-                Game.Values.WeekDay = Game.Values.WeekDay.Substring(0,3);
+                Game.Values.WeekDay = Game.Values.WeekDay.Substring(0, 3);
 
                 lbGeneral.Text = "General info: \n\n" +
                                  "SDK Running: " + $"{data.SdkActive}\n\n" +
@@ -231,8 +231,8 @@ namespace ArduinoSCSTelemetry
                 truckWaterTempWarn.Text = "Water Temp.: " + Truck.Warnings.WaterTemperature;
                 jsonTest.Text = JSONmsg;
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 Console.WriteLine("Exception: " + ex);
             }
         }
@@ -314,7 +314,8 @@ namespace ArduinoSCSTelemetry
                             if (Truck.Warnings.AirPressureEmergency)
                             {
                                 airPressureWarn = "Emergency";
-                            } else if (Truck.Warnings.AirPressure)
+                            }
+                            else if (Truck.Warnings.AirPressure)
                             {
                                 airPressureWarn = "Warning";
                             }
@@ -375,7 +376,8 @@ namespace ArduinoSCSTelemetry
                             ScreenView = "Driving";
                         }
                     }
-                    catch(Exception ex) {
+                    catch (Exception ex)
+                    {
                         Console.WriteLine("Exception: " + ex);
                     }
                 }

@@ -1,4 +1,4 @@
-﻿namespace ArduinoSCSTelemetry
+﻿namespace SCSTelemetryServer
 {
     public class TruckVariables
     {
@@ -46,7 +46,7 @@
         }
 
         public class WarningValues
-        { 
+        {
             public bool AirPressure { get; set; }
             public bool AirPressureEmergency { get; set; }
             public bool Fuel { get; set; }
@@ -61,7 +61,7 @@
             public string AuxFront { get; set; }
             public string AuxRoof { get; set; }
             public bool BlinkerLeftActive { get; set; }
-            public bool BlinkerRightActive { get; set; } 
+            public bool BlinkerRightActive { get; set; }
             public bool BlinkerLeftOn { get; set; }
             public bool BlinkerRightOn { get; set; }
             public bool Parking { get; set; }

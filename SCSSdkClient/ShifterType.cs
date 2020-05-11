@@ -1,8 +1,10 @@
-﻿namespace SCSSdkClient {
+﻿namespace SCSSdkClient
+{
     /// <summary>
     ///     Shifter Type
     /// </summary>
-    public enum ShifterType {
+    public enum ShifterType
+    {
         /// About: Values
         /// 
         /// Arcade     - Dont' now (some problems)

@@ -1,13 +1,17 @@
-﻿namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+﻿namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Truck telemetry specific values
         /// </summary>
-        public partial class Truck {
+        public partial class Truck
+        {
             /// <summary>
             ///     Initialise a truck object
             /// </summary>
-            public Truck() {
+            public Truck()
+            {
                 ConstantsValues = new Constants();
                 CurrentValues = new Current();
                 Positioning = new PositionData();

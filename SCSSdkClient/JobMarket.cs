@@ -1,5 +1,7 @@
-﻿namespace SCSSdkClient {
-    public enum JobMarket {
+﻿namespace SCSSdkClient
+{
+    public enum JobMarket
+    {
         NoValue,
         cargo_market,
         quick_job,

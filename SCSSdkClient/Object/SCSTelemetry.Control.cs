@@ -1,15 +1,19 @@
 ﻿#pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     User Input value and value used by the game
         /// </summary>
-        public class Control {
+        public class Control
+        {
             /// <summary>
             ///     Initialise a Control object
             /// </summary>
-            public Control() {
+            public Control()
+            {
                 InputValues = new Input();
                 GameValues = new Game();
             }
@@ -32,7 +36,8 @@ namespace SCSSdkClient.Object {
             /// <summary>
             ///     Input value
             /// </summary>
-            public class Input {
+            public class Input
+            {
                 /// About: Steering
                 /// Note that it is interpreted counterclockwise.
                 /// 
@@ -89,7 +94,8 @@ namespace SCSSdkClient.Object {
             /// <summary>
             ///     value used by the game
             /// </summary>
-            public class Game {
+            public class Game
+            {
                 /// About: Steer
                 /// Note that it is interpreted counterclockwise.
                 /// 

@@ -1,11 +1,14 @@
 ﻿#pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Represents a Double Placement similar to the one in the SDK with coordinate X,Y,Z and rotation X,Y,Z
         /// </summary>
-        public class DPlacement {
+        public class DPlacement
+        {
             /// <summary>
             ///     Represents a Position
             /// </summary>

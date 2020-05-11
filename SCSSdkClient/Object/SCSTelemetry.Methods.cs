@@ -1,7 +1,9 @@
 ﻿using System;
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Converts uint minutes in a DateTime object
         /// </summary>
@@ -10,7 +12,7 @@ namespace SCSSdkClient.Object {
         ///     DateTime object of the in-game time
         /// </returns>
         internal static DateTime MinutesToDate(uint minutes) =>
-            new DateTime((long) minutes * 10000000 * 60, DateTimeKind.Utc);
+            new DateTime((long)minutes * 10000000 * 60, DateTimeKind.Utc);
 
         /// <summary>
         ///     Converts int minutes in a DateTime object
@@ -20,7 +22,7 @@ namespace SCSSdkClient.Object {
         ///     DateTime object of the in-game time
         /// </returns>
         internal static DateTime MinutesToDate(int minutes) =>
-            new DateTime((long) Math.Abs(minutes) * 10000000 * 60, DateTimeKind.Utc);
+            new DateTime((long)Math.Abs(minutes) * 10000000 * 60, DateTimeKind.Utc);
 
 
         /// <summary>
@@ -36,7 +38,7 @@ namespace SCSSdkClient.Object {
         ///     Sum of both Float Vectors
         /// </returns>
         public static FVector Add(FVector first, FVector second) =>
-            new FVector {X = first.X + second.X, Y = first.Y + second.Y, Z = first.Z + second.Z};
+            new FVector { X = first.X + second.X, Y = first.Y + second.Y, Z = first.Z + second.Z };
 
         /// <summary>
         ///     Adds float vector to double vector
@@ -51,7 +53,7 @@ namespace SCSSdkClient.Object {
         ///     sum as double vector
         /// </returns>
         public static DVector Add(DVector first, FVector second) =>
-            new DVector {X = first.X + second.X, Y = first.Y + second.Y, Z = first.Z + second.Z};
+            new DVector { X = first.X + second.X, Y = first.Y + second.Y, Z = first.Z + second.Z };
 
         /// <summary>
         ///     Rotates specified vector by specified orientation
@@ -65,7 +67,8 @@ namespace SCSSdkClient.Object {
         /// <returns>
         ///     rotated float vector
         /// </returns>
-        public static FVector Rotate(Euler orientation, FVector vector) {
+        public static FVector Rotate(Euler orientation, FVector vector)
+        {
             var headingRadians = orientation.Heading * PiTimes2;
             var pitchRadians = orientation.Pitch * PiTimes2;
             var rollRadians = orientation.Roll * PiTimes2;
@@ -89,23 +92,29 @@ namespace SCSSdkClient.Object {
 
             // heading around y axis
 
-            return new FVector {
-                                   X = (float) (postPitchX * cosHeading + postPitchZ * sinHeading),
-                                   Y = (float) postPitchY,
-                                   Z = (float) (-postPitchX * sinHeading + postPitchZ * cosHeading)
-                               };
+            return new FVector
+            {
+                X = (float)(postPitchX * cosHeading + postPitchZ * sinHeading),
+                Y = (float)postPitchY,
+                Z = (float)(-postPitchX * sinHeading + postPitchZ * cosHeading)
+            };
         }
 
-        internal void SetGameTime(uint gameTime) {
+        internal void SetGameTime(uint gameTime)
+        {
             CommonValues.GameTime.Value = gameTime;
-            if (gameTime > 0 && gameTime < 4000000000 && JobValues.DeliveryTime.Value > 0) {
-                JobValues.RemainingDeliveryTime.Value = (int) (JobValues.DeliveryTime.Value - gameTime);
-            } else {
+            if (gameTime > 0 && gameTime < 4000000000 && JobValues.DeliveryTime.Value > 0)
+            {
+                JobValues.RemainingDeliveryTime.Value = (int)(JobValues.DeliveryTime.Value - gameTime);
+            }
+            else
+            {
                 JobValues.RemainingDeliveryTime.Value = 0;
             }
         }
 
-        internal void SetTruckPosition(DPlacement position) {
+        internal void SetTruckPosition(DPlacement position)
+        {
             TruckValues.CurrentValues.PositionValue = position;
             TruckValues.Positioning.TruckPosition = position;
         }

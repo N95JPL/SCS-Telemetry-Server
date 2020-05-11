@@ -1,9 +1,12 @@
-﻿namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+﻿namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Wheel information
         /// </summary>
-        public class WheelsConstants {
+        public class WheelsConstants
+        {
             /// About: Count
             /// SDK limited to 14 for SDK 1_9
             /// <summary>

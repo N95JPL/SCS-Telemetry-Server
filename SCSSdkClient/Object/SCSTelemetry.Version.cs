@@ -1,11 +1,14 @@
 ﻿#pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Represented a Version with Major and Minor
         /// </summary>
-        public class Version {
+        public class Version
+        {
             /// <summary>
             ///     Major part of the version information
             /// </summary>

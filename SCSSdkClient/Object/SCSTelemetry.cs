@@ -2,18 +2,21 @@
 
 #pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
+namespace SCSSdkClient.Object
+{
     /// <summary>
     ///     Telemetry Data of SCS SDK's
     /// </summary>
     //
-    public partial class SCSTelemetry {
+    public partial class SCSTelemetry
+    {
         private const float PiTimes2 = 6.2831853071795864769252867665590058f;
 
         /// <summary>
         ///     initialise an SCSTelemetry object
         /// </summary>
-        public SCSTelemetry() {
+        public SCSTelemetry()
+        {
             GameVersion = new Version();
             TelemetryVersion = new Version();
             TruckValues = new Truck();
@@ -38,7 +41,7 @@ namespace SCSSdkClient.Object {
         /// 
         /// About: Temperatures
         /// Aproximated for entire truck, not at the wheel level.
-      
+
         /// <summary>
         ///     Is the sdk active (only reset when game is closed correct, crashes or kills won't set this value)
         /// </summary> 

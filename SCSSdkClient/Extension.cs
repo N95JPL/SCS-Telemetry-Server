@@ -1,17 +1,19 @@
 ﻿using System;
 
-namespace SCSSdkClient {
+namespace SCSSdkClient
+{
     /// <summary>
     ///     Some useful extensions
     /// </summary>
-    public static class Extension {
+    public static class Extension
+    {
         /// <summary>
         ///     Converts an uint to an given enum type
         /// </summary>
         /// <param name="enumInt">uint to convert</param>
         /// <typeparam name="T">Type of the enum</typeparam>
         /// <returns>uint as enum</returns>
-        public static T ToEnum<T>(this uint enumInt) => (T) Enum.ToObject(typeof(T), enumInt);
+        public static T ToEnum<T>(this uint enumInt) => (T)Enum.ToObject(typeof(T), enumInt);
 
         /// <summary>
         ///     Converts an string to an given enum type.
@@ -28,22 +30,29 @@ namespace SCSSdkClient {
         /// </summary>
         /// <param name="choob"></param>
         /// <returns></returns>
-        public static string StringFormater(this string choob) {
+        public static string StringFormater(this string choob)
+        {
             var result = "";
-            for (var index = 0; index < choob.Length; index++) {
+            for (var index = 0; index < choob.Length; index++)
+            {
                 var cha = choob[index];
                 result += cha;
-                if (cha != '\n') {
+                if (cha != '\n')
+                {
                     continue;
                 }
 
 
-                while (cha == '\n' || cha == '\t') {
+                while (cha == '\n' || cha == '\t')
+                {
                     index++;
                     cha = choob[index];
-                    if (cha == '\n' || cha == '\t') {
+                    if (cha == '\n' || cha == '\t')
+                    {
                         result += cha;
-                    } else {
+                    }
+                    else
+                    {
                         result += '\t';
                         result += cha;
                     }

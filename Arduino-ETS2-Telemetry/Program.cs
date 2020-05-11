@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ArduinoSCSTelemetry
+namespace SCSTelemetryServer
 {
     static class Program
     {

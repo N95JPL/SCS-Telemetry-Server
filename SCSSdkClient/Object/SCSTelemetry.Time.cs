@@ -2,12 +2,15 @@
 
 #pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Represent a time object with time in minutes and a DateTime object
         /// </summary>
-        public class Time {
+        public class Time
+        {
             public Time(uint i) => Value = i;
 
             public Time() { }

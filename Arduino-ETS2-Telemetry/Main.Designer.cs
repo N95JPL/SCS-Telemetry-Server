@@ -1,4 +1,4 @@
-﻿namespace ArduinoSCSTelemetry
+﻿namespace SCSTelemetryServer
 {
     partial class Main
     {

@@ -1,4 +1,17 @@
 ﻿D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (scs-telemetry.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  log.cpp
+  scs_gameplay_event_handlers.cpp
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(189,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(226,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(232,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(238,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(244,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(262,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(268,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(274,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(280,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  scs_telemetry.cpp
+D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_telemetry.cpp(433,48): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   scs_config_handlers.cpp
 D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_config_handlers.cpp(201,9): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_config_handlers.cpp(212,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
@@ -30,18 +43,6 @@ D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_config_handlers.cpp(586,5): warn
 D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_config_handlers.cpp(590,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_config_handlers.cpp(595,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_config_handlers.cpp(611,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  scs_gameplay_event_handlers.cpp
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(189,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(226,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(232,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(238,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(244,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(262,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(268,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(274,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_gameplay_event_handlers.cpp(280,5): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  scs_telemetry.cpp
-D:\ETS2-Arduino-Telemetry\scs-telemetry\src\scs_telemetry.cpp(433,48): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   sharedmemory.cpp
   Generating Code...
      Creating library D:\ETS2-Arduino-Telemetry\Arduino-ETS2-Telemetry\bin\Arduino-Telemetry-x64.lib and object D:\ETS2-Arduino-Telemetry\Arduino-ETS2-Telemetry\bin\Arduino-Telemetry-x64.exp

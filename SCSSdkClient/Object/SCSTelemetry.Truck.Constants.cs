@@ -1,14 +1,19 @@
-﻿namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
-        public partial class Truck {
+﻿namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
+        public partial class Truck
+        {
             /// <summary>
             ///     Config values
             /// </summary>
-            public class Constants {
+            public class Constants
+            {
                 /// <summary>
                 ///     Initialise a constants object
                 /// </summary>
-                public Constants() {
+                public Constants()
+                {
                     MotorValues = new Motor();
                     CapacityValues = new Capacity();
                     WarningFactorValues = new WarningFactor();
@@ -68,10 +73,11 @@
                 /// <summary>
                 ///     Gear, Retarder, etc.
                 /// </summary>
-                public class Motor {
+                public class Motor
+                {
                     /// About: RetarderStepCount
                     /// Set to zero if retarder is not mounted on the truck
-                    
+
                     /// <summary>
                     ///     Number of forward gears on undamaged truck
                     /// </summary>
@@ -148,7 +154,8 @@
                 /// <summary>
                 ///     Fuel, Adblue, etc.
                 /// </summary>
-                public class Capacity {
+                public class Capacity
+                {
                     /// <summary>
                     ///     Fuel tank capacity in litres.
                     /// </summary>
@@ -163,7 +170,8 @@
                 /// <summary>
                 ///     At which value X give a warning?
                 /// </summary>
-                public class WarningFactor {
+                public class WarningFactor
+                {
                     /// <summary>
                     ///     Fraction of the fuel capacity bellow which is activated the fuel warning.
                     /// </summary>

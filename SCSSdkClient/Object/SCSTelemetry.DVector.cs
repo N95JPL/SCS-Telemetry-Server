@@ -1,11 +1,14 @@
 ﻿#pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Represent a Double Vector simular to the one in the SDK with X,Y and Z Coordinated
         /// </summary>
-        public class DVector {
+        public class DVector
+        {
             /// <summary>
             ///     X Coordinate of the Vector
             ///     In local space point right

@@ -1,15 +1,20 @@
 ﻿#pragma warning disable 1570
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
-        public partial class Truck {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
+        public partial class Truck
+        {
             /// <summary>
             ///     Values that are changing a lot oftener
             /// </summary>
-            public class Current {
+            public class Current
+            {
                 /// <summary>
                 ///     Initialise a current truck object
                 /// </summary>
-                public Current() {
+                public Current()
+                {
                     MotorValues = new Motor();
                     DashboardValues = new Dashboard();
                     LightsValues = new Lights();
@@ -72,11 +77,13 @@ namespace SCSSdkClient.Object {
                 /// <summary>
                 ///     Gear, Retarder, etc.
                 /// </summary>
-                public class Motor {
+                public class Motor
+                {
                     /// <summary>
                     ///     Initialise a motor object
                     /// </summary>
-                    public Motor() {
+                    public Motor()
+                    {
                         GearValues = new Gear();
                         BrakeValues = new Brakes();
                     }
@@ -94,7 +101,8 @@ namespace SCSSdkClient.Object {
                     /// <summary>
                     ///     Slected Gear, HShifter... etc.
                     /// </summary>
-                    public class Gear {
+                    public class Gear
+                    {
                         /// About: HShifterSlot
                         /// 0 means that no slot is selected
                         ///  
@@ -103,7 +111,7 @@ namespace SCSSdkClient.Object {
                         /// - > 0  - Forward gears
                         /// -    0  - Neutral
                         /// - < 0  - Reverse gears
-                        
+
                         /// <summary>
                         ///     Gearbox slot the h-shifter handle is currently in.
                         /// </summary>
@@ -131,7 +139,8 @@ namespace SCSSdkClient.Object {
                     /// <summary>
                     ///     Brake Values
                     /// </summary>
-                    public class Brakes {
+                    public class Brakes
+                    {
                         /// About: RetarderLevel
                         /// <0;max>
                         ///     where 0 is disabled retarder and max is maximal value found in Truck configuration
@@ -171,11 +180,13 @@ namespace SCSSdkClient.Object {
                 /// <summary>
                 ///     Speed, RPM, Pressures, Temperatures
                 /// </summary>
-                public class Dashboard {
+                public class Dashboard
+                {
                     /// <summary>
                     ///     Initialise a dashboard object
                     /// </summary>
-                    public Dashboard() {
+                    public Dashboard()
+                    {
                         FuelValue = new Fuel();
                         WarningValues = new Warnings();
                         Speed = new Movement();
@@ -193,7 +204,7 @@ namespace SCSSdkClient.Object {
                     /// - > 0  - Forward gears
                     /// -    0  - Neutral
                     /// - < 0  - Reverse gears
-                     
+
                     /// <summary>
                     ///     Information about fuel: amount, range, average consumption
                     /// </summary>
@@ -280,7 +291,8 @@ namespace SCSSdkClient.Object {
                     /// <summary>
                     ///     Contains Fuel values
                     /// </summary>
-                    public class Fuel {
+                    public class Fuel
+                    {
                         /// <summary>
                         ///     Amount of fuel in liters
                         /// </summary>
@@ -300,7 +312,8 @@ namespace SCSSdkClient.Object {
                     /// <summary>
                     ///     Warnings
                     /// </summary>
-                    public class Warnings {
+                    public class Warnings
+                    {
                         /// <summary>
                         ///     Is the air pressure warning active?
                         /// </summary>
@@ -341,13 +354,14 @@ namespace SCSSdkClient.Object {
                 /// <summary>
                 ///     Lightlevel and state of Lights
                 /// </summary>
-                public class Lights {
+                public class Lights
+                {
                     /// About: Blinker Avtive
                     /// This represents the logical enable state of the blinker. It
                     /// it is true as long the blinker is enabled regardless of the
                     /// physical enabled state of the light (i.e. it does not blink
                     /// and ignores enable state of electric).
-                     
+
                     /// <summary>
                     ///     Are the auxiliary front lights active?
                     /// </summary>
@@ -429,7 +443,8 @@ namespace SCSSdkClient.Object {
                 /// <summary>
                 ///     States of the Wheels
                 /// </summary>
-                public class Wheels {
+                public class Wheels
+                {
                     /// About: Velocity
                     /// Positive velocity corresponds to forward movement
                     /// 
@@ -440,22 +455,22 @@ namespace SCSSdkClient.Object {
                     /// direction when looking from top (e.g. 0.25 corresponds to left and -0.25 corresponds to right)
                     /// 
                     /// Set to zero for non-steered wheels
- 
+
                     /// About: Rotation
                     /// Value is from
                     /// <0.0,1.0) range in which value increase corresponds to forward movement
-                  
+
                     /// About: Lift
                     /// For use with simple lifted/ non-lifted test or logical visualization of the lifting progress.
                     ///  
                     /// - Value of 0 corresponds to non-lifted axle.
                     /// - Value of 1 corresponds to fully lifted axle.
                     /// Set to zero or not provided for non-liftable axles.
-                     
+
                     /// About: LiftOffset
                     /// Might have non-linear relation to lift ratio.
                     /// Set to zero or not provided for non-liftable axles.
-                    
+
                     /// <summary>
                     ///     Substance below the wheel
                     /// </summary>
@@ -524,7 +539,8 @@ namespace SCSSdkClient.Object {
                 /// <summary>
                 ///     Wear of Truck parts
                 /// </summary>
-                public class Damage {
+                public class Damage
+                {
                     /// <summary>
                     ///     Wear of the engine accessory as &lt;0;1&gt;
                     /// </summary>
@@ -551,7 +567,8 @@ namespace SCSSdkClient.Object {
                     public float WheelsAvg { get; internal set; }
                 }
 
-                public class Acceleration {
+                public class Acceleration
+                {
                     /// <summary>
                     ///     Represents vehicle space linear velocity of the truck measured in m/s
                     /// </summary>

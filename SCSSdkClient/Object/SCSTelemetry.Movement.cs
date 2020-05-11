@@ -1,11 +1,14 @@
 ﻿#pragma warning disable 1570
 
-namespace SCSSdkClient.Object {
-    public partial class SCSTelemetry {
+namespace SCSSdkClient.Object
+{
+    public partial class SCSTelemetry
+    {
         /// <summary>
         ///     Contains a in-game speed value (m/s), Kph (Km/h) and Mph of a speed value
         /// </summary>
-        public class Movement {
+        public class Movement
+        {
             public Movement(float f) => Value = f;
 
             public Movement() { }
