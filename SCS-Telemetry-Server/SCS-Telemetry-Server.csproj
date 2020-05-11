@@ -22,7 +22,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>D:\ETS2-Arduino-Telemetry\Publish\</PublishUrl>
+    <PublishUrl>D:\SCS-Telemetry-Server\Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
