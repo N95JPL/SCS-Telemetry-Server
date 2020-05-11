@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.screenButton = new System.Windows.Forms.Button();
             this.screenText = new System.Windows.Forms.TextBox();
             this.jsonTest = new System.Windows.Forms.RichTextBox();
@@ -76,7 +77,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -109,6 +109,14 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Server Settings";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(381, 269);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 17);
+            this.listBox1.TabIndex = 3;
             // 
             // screenButton
             // 
@@ -573,16 +581,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(768, 30);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Arduino-ETS2 Telemetry Server";
+            this.label2.Text = "SCS Telemetry Server";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(381, 269);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 17);
-            this.listBox1.TabIndex = 3;
             // 
             // Main
             // 
@@ -595,7 +595,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.Text = "Arduino-ETS2-Server";
+            this.Text = "SCS Telemetry Server";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ArduinoETS2Telemetry_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
