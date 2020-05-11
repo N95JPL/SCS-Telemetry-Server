@@ -9,14 +9,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SCS-Telemetry-Server.exe.manifest" size="6634">
+    <dependentAssembly dependencyType="install" codebase="SCS-Telemetry-Server.exe.manifest" size="6635">
       <assemblyIdentity name="SCS-Telemetry-Server.exe" version="0.1.5.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TnM84DzHfV/7XxNStRUJ/yYfLv0kt67BTomuILB0qIM=</dsig:DigestValue>
+        <dsig:DigestValue>cofTv6gbteU2q8BbJlI2ip92xhI/SNVE+Lj8QoC5arw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

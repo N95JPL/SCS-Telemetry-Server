@@ -13,13 +13,16 @@ namespace SCSTelemetryServer
         Coordinates Coord = new Coordinates();
         TruckVariables Truck = new TruckVariables();
         Game Game = new Game();
+        public void serverManager(Object obj)
+        {
 
+        }
         public void portManager(Object obj)
         {
             if (ComPort == null)
             {
                 GetAllPorts();
-                _port = new SerialPort(ComPort, 9600);
+                _port = new SerialPort(ComPort, 14400);
                 _port.WriteTimeout = 500;
                 _port.ReadTimeout = 500;
             }

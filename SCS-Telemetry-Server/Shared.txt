@@ -1,1 +1,1 @@
-Local\\ArduinoSCSTelemetry
+Local\\JPLogicSCSPlugin
