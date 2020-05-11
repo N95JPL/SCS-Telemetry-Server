@@ -1,10 +1,14 @@
 # Arduino-SCS-Telemetry
 A telemetry server for ETS2 & ATS, utilizing a Web Server & Serial Access in order to help create new applications!
+
 Using the spectacular [SCS-SDK-Plugin](https://github.com/RenCloud/scs-sdk-plugin) by RenCloud!
 
 Video example of the Arduino Server Running [YouTube](https://youtu.be/5VJYbR_MEM0)
+
 Images of the V0.0.1A User Interface [Imgur](https://imgur.com/a/qS7otsD)
+
 Reddit Showcase #1 Post [Reddit](https://www.reddit.com/r/trucksim/comments/gd1pgt/arduinoscstelemetry_showcase_1/)
+
 ### -- Features --
 
 * Connects to ETS2 & ATS Telemetry
