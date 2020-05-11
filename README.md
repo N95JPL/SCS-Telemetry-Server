@@ -1,4 +1,4 @@
-# SCS Telemetry Server
+# SCS Telemetry Server :articulated_lorry:
 A telemetry server for ETS2 & ATS, utilizing a Web Server & Serial Access in order to help create new applications!
 
 Using the spectacular [SCS-SDK-Plugin](https://github.com/RenCloud/scs-sdk-plugin) by RenCloud!
