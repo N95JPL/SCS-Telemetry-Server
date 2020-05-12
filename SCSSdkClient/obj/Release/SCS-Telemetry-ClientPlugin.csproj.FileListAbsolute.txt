@@ -6,3 +6,4 @@ D:\SCS-Telemetry-Server\SCSSdkClient\obj\Release\SCS-Telemetry-ClientPlugin.pdb
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.xml
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.dll
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.pdb
+D:\SCS-Telemetry-Server\SCSSdkClient\obj\Release\SCS-Telemetry-ClientPlugin.csprojAssemblyReference.cache
