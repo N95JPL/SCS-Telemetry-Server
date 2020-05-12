@@ -40,8 +40,8 @@ namespace SCSTelemetryServer
                 //MessageBox.Show("COM OPEN!");
                 //string Day = Game.Values.WeekDay;
                 //string Time = Game.Values.Time;
-                string msg = Truck.Constant.Model + ";";
-                _port.Write(msg);
+                //string msg = Truck.Constant.Model + ";";
+                //_port.Write(msg);
                 //MessageBox.Show(msg);
             }
         }

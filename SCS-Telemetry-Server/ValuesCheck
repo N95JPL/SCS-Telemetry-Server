@@ -14,41 +14,41 @@ Game Values (V.1.10.5)
 │[ ] │    ├── NextRestStop (Frequency object, more a time span)
 │[ ] │    └── NextRestStopTime (Specific date, calculated)
 │[ ] ├── Truck Values (Contains 2 big parts, and a small one):
-│[ ] │    ├── Constants/Configs (Values that barely change):
-│[ ] │    │    ├── Motor Values:
-│[ ] │    │    │    ├── Forward Gear Count
-│[ ] │    │    │    ├── Reverse Gear Count
-│[ ] │    │    │    ├── Retarder Step Count
-│[ ] │    │    │    ├── Selector Count
-│[ ] │    │    │    ├── Engine RPM Max
-│[ ] │    │    │    ├── Differential Ration
-│[ ] │    │    │    ├── Gear Ratios Forward
-│[ ] │    │    │    ├── Gear Ratios Reverse
-│[ ] │    │    │    ├── Shifter Type Value (Enum)
-│[ ] │    │    │    ├── SlotGear
-│[ ] │    │    │    ├── SlotHandlePosition
-│[ ] │    │    │    └── SlotSelectors
-│[ ] │    │    ├── Capacity Values:
-│[ ] │    │    │    ├── Fuel
-│[ ] │    │    │    └── Adblue
-│[ ] │    │    ├── Warning Factors:
-│[ ] │    │    │    ├── Fuel
-│[ ] │    │    │    ├── Adblue
-│[ ] │    │    │    ├── Air Pressure
-│[ ] │    │    │    ├── Air Pressure Emergency
-│[ ] │    │    │    ├── Oil Pressure
-│[ ] │    │    │    ├── Water Temperature
-│[ ] │    │    │    └── Battery Voltage
-│[ ] │    │    ├── Wheels:
-│[ ] │    │    │    ├── Count
-│[ ] │    │    │    ├── Radius
-│[ ] │    │    │    ├── Simulated
-│[ ] │    │    │    ├── Powered
-│[ ] │    │    │    ├── Liftable
-│[ ] │    │    │    └── Steerable
-│[ ] │    │    ├── Brand Id (code)
+│[x] │    ├── Constants/Configs (Values that barely change):
+│[x] │    │    ├── Motor Values:
+│[x] │    │    │    ├── Forward Gear Count
+│[x] │    │    │    ├── Reverse Gear Count
+│[x] │    │    │    ├── Retarder Step Count
+│[x] │    │    │    ├── Selector Count
+│[x] │    │    │    ├── Engine RPM Max
+│[x] │    │    │    ├── Differential Ration
+│[x] │    │    │    ├── Gear Ratios Forward
+│[x] │    │    │    ├── Gear Ratios Reverse
+│[x] │    │    │    ├── Shifter Type Value (Enum)
+│[x] │    │    │    ├── SlotGear
+│[x] │    │    │    ├── SlotHandlePosition
+│[x] │    │    │    └── SlotSelectors
+│[x] │    │    ├── Capacity Values:
+│[x] │    │    │    ├── Fuel
+│[x] │    │    │    └── Adblue
+│[x] │    │    ├── Warning Factors:
+│[x] │    │    │    ├── Fuel
+│[x] │    │    │    ├── Adblue
+│[x] │    │    │    ├── Air Pressure
+│[x] │    │    │    ├── Air Pressure Emergency
+│[x] │    │    │    ├── Oil Pressure
+│[x] │    │    │    ├── Water Temperature
+│[x] │    │    │    └── Battery Voltage
+│[x] │    │    ├── Wheels:
+│[x] │    │    │    ├── Count
+│[x] │    │    │    ├── Radius
+│[x] │    │    │    ├── Simulated
+│[x] │    │    │    ├── Powered
+│[x] │    │    │    ├── Liftable
+│[x] │    │    │    └── Steerable
+│[x] │    │    ├── Brand Id (code)
 │[x] │    │    ├── Brand
-│[ ] │    │    ├── Id (code)
+│[x] │    │    ├── Id (code)
 │[x] │    │    ├── Name
 │[x] │    │    ├── LicensePlate (1.14/1.01/1.35)
 │[x] │    │    ├── LicensePlateCountryId (1.14/1.01/1.35)

@@ -113,46 +113,6 @@ namespace SCSTelemetryServer
                 
                 //Truck.OnJob = data.SpecialEventsValues.OnJob.ToString();
 
-                //Truck Warnings
-                Truck.Warnings.AirPressure = data.TruckValues.CurrentValues.DashboardValues.WarningValues.AirPressure;
-                Truck.Warnings.AirPressureEmergency = data.TruckValues.CurrentValues.DashboardValues.WarningValues.AirPressureEmergency;
-                Truck.Warnings.Adblue = data.TruckValues.CurrentValues.DashboardValues.WarningValues.AdBlue;
-                Truck.Warnings.BatteryVoltage = data.TruckValues.CurrentValues.DashboardValues.WarningValues.BatteryVoltage;
-                Truck.Warnings.Fuel = data.TruckValues.CurrentValues.DashboardValues.WarningValues.FuelW;
-                Truck.Warnings.OilPressure = data.TruckValues.CurrentValues.DashboardValues.WarningValues.OilPressure;
-                Truck.Warnings.WaterTemperature = data.TruckValues.CurrentValues.DashboardValues.WarningValues.WaterTemperature;
-
-                //Set Variable Values
-                Truck.Current.Mileage = (int)(data.TruckValues.CurrentValues.DashboardValues.Odometer * 0.62137); //In miles
-                Truck.Current.Speed = (int)data.TruckValues.CurrentValues.DashboardValues.Speed.Mph;
-                Truck.Current.Gear = data.TruckValues.CurrentValues.DashboardValues.GearDashboards.ToString();
-                Truck.Current.Fuel = (int)data.TruckValues.CurrentValues.DashboardValues.FuelValue.Amount;
-                Truck.Current.Range = (int)(data.TruckValues.CurrentValues.DashboardValues.FuelValue.Range * 0.62137); //In Miles
-                Truck.Current.CruiseControl = data.TruckValues.CurrentValues.DashboardValues.CruiseControl;
-                Truck.Current.CruiseControlSpeed = (int)data.TruckValues.CurrentValues.DashboardValues.CruiseControlSpeed.Mph;
-                Truck.Current.AirPressure = (int)data.TruckValues.CurrentValues.MotorValues.BrakeValues.AirPressure;
-                Truck.Current.BrakeTemperature = (int)data.TruckValues.CurrentValues.MotorValues.BrakeValues.Temperature;
-                Truck.Current.ParkingBrake = data.TruckValues.CurrentValues.MotorValues.BrakeValues.ParkingBrake;
-                Truck.Current.EngineBrake = data.TruckValues.CurrentValues.MotorValues.BrakeValues.MotorBrake;
-                Truck.Current.RetarderLevel = data.TruckValues.CurrentValues.MotorValues.BrakeValues.RetarderLevel;
-                Coord.X = data.TruckValues.CurrentValues.PositionValue.Position.X;
-                Coord.Y = data.TruckValues.CurrentValues.PositionValue.Position.Y;
-                Coord.Z = data.TruckValues.CurrentValues.PositionValue.Position.Z;
-
-                //Truck Lights
-                Truck.Lights.AuxFront = data.TruckValues.CurrentValues.LightsValues.AuxFront.ToString();
-                Truck.Lights.AuxRoof = data.TruckValues.CurrentValues.LightsValues.AuxRoof.ToString();
-                Truck.Lights.Beacon = data.TruckValues.CurrentValues.LightsValues.Beacon;
-                Truck.Lights.BeamHigh = data.TruckValues.CurrentValues.LightsValues.BeamHigh;
-                Truck.Lights.BeamLow = data.TruckValues.CurrentValues.LightsValues.BeamLow;
-                Truck.Lights.BlinkerLeftOn = data.TruckValues.CurrentValues.LightsValues.BlinkerLeftOn;
-                Truck.Lights.BlinkerLeftActive = data.TruckValues.CurrentValues.LightsValues.BlinkerLeftActive;
-                Truck.Lights.BlinkerRightOn = data.TruckValues.CurrentValues.LightsValues.BlinkerRightOn;
-                Truck.Lights.BlinkerRightActive = data.TruckValues.CurrentValues.LightsValues.BlinkerRightActive;
-                Truck.Lights.Brake = data.TruckValues.CurrentValues.LightsValues.Brake;
-                Truck.Lights.Parking = data.TruckValues.CurrentValues.LightsValues.Parking;
-                Truck.Lights.Reverse = data.TruckValues.CurrentValues.LightsValues.Reverse;
-
                 //Game Values
                 Game.Values.Time = data.CommonValues.GameTime.Date.ToString();
                 Game.Values.Day = data.CommonValues.GameTime.Date.Day;
@@ -176,6 +136,7 @@ namespace SCSTelemetryServer
                                  "Game Paused: " + $"{data.Paused}\n\n" +
                                  "Update Int.: " + UpdateInterval + "m\n\n" +
                                  "COM Port: " + ComPort;
+                Truck.TruckJSON(data.TruckValues);
             }
 
             catch (Exception ex)
@@ -190,7 +151,7 @@ namespace SCSTelemetryServer
             try
             {
                 //Show Mainly Static Truck Values
-                truckRegPlate.Text = "Registration: " + Truck.Constant.RegPlate + " (" + Truck.Constant.RegPlateCountryID + ")";
+                /*truckRegPlate.Text = "Registration: " + Truck.Constant.RegPlate + " (" + Truck.Constant.RegPlateCountryID + ")";
                 truckManufacture.Text = "Manufacturer: " + Truck.Constant.Manufacture;
                 truckModel.Text = "Model: " + Truck.Constant.Model;
                 truckFuelCap.Text = "Fuel Capacity: " + Truck.Constant.FuelCap;
@@ -226,8 +187,8 @@ namespace SCSTelemetryServer
                 if (Truck.Warnings.OilPressure) { truckOilPressureWarn.BackColor = System.Drawing.Color.Red; } else { truckOilPressureWarn.BackColor = System.Drawing.Color.Green; }
                 truckOilPressureWarn.Text = "Oil Pressure: " + Truck.Warnings.OilPressure;
                 if (Truck.Warnings.WaterTemperature) { truckWaterTempWarn.BackColor = System.Drawing.Color.Red; } else { truckWaterTempWarn.BackColor = System.Drawing.Color.Green; }
-                truckWaterTempWarn.Text = "Water Temp.: " + Truck.Warnings.WaterTemperature;
-                jsonTest.Text = JSONmsg;
+                truckWaterTempWarn.Text = "Water Temp.: " + Truck.Warnings.WaterTemperature;*/
+                jsonTest.Text = JsonConvert.SerializeObject(Truck.truckConstant, Formatting.Indented);
             }
             catch (Exception ex)
             {
@@ -261,7 +222,7 @@ namespace SCSTelemetryServer
 
         public void portManager(object obj)
         {
-            while (true)
+           /* while (true)
             {
                 if (ComPort == "0")
                 {
@@ -378,7 +339,7 @@ namespace SCSTelemetryServer
                         Console.WriteLine("Exception: " + ex);
                     }
                 }
-            }
+            }*/
         }
 
         public List<string> GetAllPorts()
