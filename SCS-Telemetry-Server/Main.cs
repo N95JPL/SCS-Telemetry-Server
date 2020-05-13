@@ -136,7 +136,7 @@ namespace SCSTelemetryServer
                                  "Game Paused: " + $"{data.Paused}\n\n" +
                                  "Update Int.: " + UpdateInterval + "m\n\n" +
                                  "COM Port: " + ComPort;
-                Truck.TruckJSON(data.TruckValues);
+                Truck.TruckConstant(data.TruckValues);
             }
 
             catch (Exception ex)

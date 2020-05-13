@@ -63,10 +63,10 @@
     <DocumentationFile>bin\Release\SCS-Telemetry-Server.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>167D30DE47C0B6FC6C177776FD4C12C1ABF87CA5</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>2365315C536141A2739DAE696DBA0B34F6E3A4AC</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Arduino-ETS2-Telemetry_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MainKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

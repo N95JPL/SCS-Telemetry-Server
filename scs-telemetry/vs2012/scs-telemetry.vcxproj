@@ -77,8 +77,9 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(PlatformTarget)</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\SCS-Telemetry-Server\plugins</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(PlatformTarget)</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\SCS-Telemetry-Server\dll\plugins</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    </IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
@@ -105,9 +106,10 @@
     <IntDir>$(Configuration)\$(PlatformTarget)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\SCS-Telemetry-Server\plugins</OutDir>
+    <OutDir>..\..\SCS-Telemetry-Server\dll\plugins</OutDir>
     <TargetName>$(ProjectName)-x86</TargetName>
-    <IntDir>$(Configuration)\$(PlatformTarget)</IntDir>
+    <IntDir>
+    </IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(ProjectName)-x64</TargetName>

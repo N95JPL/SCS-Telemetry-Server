@@ -3,7 +3,7 @@
   <assemblyIdentity name="SCS-Telemetry-Server.application" version="0.1.5.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="SCS-Telemetry-Server" asmv2:product="SCS-Telemetry-Server" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true">
-    <deploymentProvider codebase="http://desktop-3755d4d/Arduino-ETS2-Telemetry/SCS-Telemetry-Server.application" />
+    <deploymentProvider codebase="http://desktop-g9ul0mo/Arduino-ETS2-Telemetry/SCS-Telemetry-Server.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
@@ -16,7 +16,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kzdsvSqUhrtiG4vwJvHuD7w/N2L+d7fMsEoZkGC0DKM=</dsig:DigestValue>
+        <dsig:DigestValue>ZUfwMdppa4whd5k/ccwXFBYfQ6kk0mGt5K955rgWg3M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
