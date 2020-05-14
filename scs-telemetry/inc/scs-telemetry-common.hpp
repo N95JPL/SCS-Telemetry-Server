@@ -22,7 +22,7 @@
 #endif
 
 #include "scssdk.h"
-#define SCS_PLUGIN_MMF_NAME TEXT("Local\\JPLogicsSCSPlugin")
+#define SCS_PLUGIN_MMF_NAME TEXT("Local\\JPLogicSCSPlugin")
 #define SCS_PLUGIN_MMF_SIZE (32*1024)
 /**
  * \brief string size for all strings (most of them) the amount of fields in the shared memory field

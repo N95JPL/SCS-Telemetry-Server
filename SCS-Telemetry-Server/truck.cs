@@ -7,63 +7,62 @@ namespace SCSTelemetryServer
 {
     public class TruckVariables
     {
-
-        public JObject truckConstant { get; private set; }
+        public object truckConstantString { get; set; }
+        public JObject truckConstant { get; set; }
         public JObject truckConstantWarning { get; private set; }
+        public JObject truckConstantMotor { get; private set; }
         public JObject truckConstantWheel { get; private set; }
         public JObject truckConstantCapacity { get; private set; }
 
         public void TruckConstant(SCSTelemetry.Truck data)
         {
-            truckConstant = new JObject
-            {
-                {"TruckValues", new JObject
-                {
-                    {"Constant", new JObject // The values in this Section should not change often, only on loading & swapping truck!
-                    {
-                        {"RegPlate", data.ConstantsValues.LicensePlate}, // Current Vehicle Registration
-                        {"RegPlateCountryID",data.ConstantsValues.LicensePlateCountryId}, // Registered Country
-                        {"RegPlateCountry",data.ConstantsValues.LicensePlateCountry}, // Registered Country ID
-                        {"ManufactureID",data.ConstantsValues.Brand}, // Truck Manufacturer ID
-                        {"Manufacture",data.ConstantsValues.Brand}, // Truck Manfacturer
-                        {"ModelID",data.ConstantsValues.Id}, // Truck Model ID
-                        {"Model",data.ConstantsValues.Name} // Truck Model
-                    }
-                    }
-                }
-                }
-            };
-            truckConstantWarning = new JObject
-            {
-                "TruckValues", new JObject
-                {
-                    {"Constant", new JObject // The values in this Section should not change often, only on loading & swapping truck!
-                    {
-                        {"MotorValues", new JObject
-                        {
-                            {"ForwardGearCount",data.ConstantsValues.MotorValues.ForwardGearCount }, // Forward Gear Count
-                            {"ReverseGearCount",data.ConstantsValues.MotorValues.ReverseGearCount }, // Reverse Gear Count
-                            {"RetarderStepCount",data.ConstantsValues.MotorValues.RetarderStepCount }, // Retarder Step Count
-                            {"SelectorCount",data.ConstantsValues.MotorValues.SelectorCount }, // Selector Count (Range/Splitter Toggles)
-                            {"MaxEngineRPM",data.ConstantsValues.MotorValues.EngineRpmMax }, // Maxmium RPM of Engine
-                            {"DifferentialRatio",data.ConstantsValues.MotorValues.DifferentialRation }, // Differential Ratio
-                            {"GearRatioForward",string.Join(",", data.ConstantsValues.MotorValues.GearRatiosForward) }, // Forward Gear Ratio's
-                            {"GearRatioReverse",string.Join(",", data.ConstantsValues.MotorValues.GearRatiosReverse) }, // Reverse Gear Ratios(s)
-                            {"ShifterTypeValue",(int)data.ConstantsValues.MotorValues.ShifterTypeValue }, // Enum 0-4 (unknown,arcade,automatic,manual,h-shifter)
-                            {"SlotGear",string.Join(",",data.ConstantsValues.MotorValues.SlotGear) }, // Slot selected if H-Shifter Requirements not met
-                            {"SlotHandlePosition",string.Join(",",data.ConstantsValues.MotorValues.SlotHandlePosition) }, // Position of H-Shifter Handle - 0 = Neutral
-                            {"SlotSelector",string.Join(",",data.ConstantsValues.MotorValues.SlotSelectors) } // Not used, unsure!
-                        }
-                        }
-                    }
-                    }
-                }
-            };
-            truckConstantCapacity = new JObject
+            truckConstant = new JObject(
+                new JProperty("TruckValues",
+                    new JObject(
+                        new JProperty("Constant", // The values in this Section should not change often, only on loading & swapping truck!
+                            new JObject(
+                                new JProperty("RegPlate", data.ConstantsValues.LicensePlate), // Current Vehicle Registration
+                                new JProperty("RegPlateCountryID", data.ConstantsValues.LicensePlateCountryId), // Registered Country
+                                new JProperty("RegPlateCountry", data.ConstantsValues.LicensePlateCountry), // Registered Country ID
+                                new JProperty("ManufactureID", data.ConstantsValues.Brand), // Truck Manufacturer ID
+                                new JProperty("Manufacture", data.ConstantsValues.Brand), // Truck Manfacturer
+                                new JProperty("ModelID", data.ConstantsValues.Id), // Truck Model ID
+                                new JProperty("Model", data.ConstantsValues.Name) // Truck Model
+            )))));
+            truckConstantString = truckConstant.ToString();
+            truckConstantMotor = new JObject(
+                 new JProperty("TruckValues", 
+                    new JObject(
+                        new JProperty("Constant1",  // The values in this Section should not change often, only on loading & swapping truck!
+                            new JObject(
+                                new JProperty("MotorValues",
+                                    new JObject(
+                                        new JProperty("ForwardGearCount", data.ConstantsValues.MotorValues.ForwardGearCount), // Forward Gear Count
+                                        new JProperty("ReverseGearCount", data.ConstantsValues.MotorValues.ReverseGearCount), // Reverse Gear Count
+                                        new JProperty("RetarderStepCount", data.ConstantsValues.MotorValues.RetarderStepCount), // Retarder Step Count
+                                        new JProperty("SelectorCount", data.ConstantsValues.MotorValues.SelectorCount), // Selector Count (Range/Splitter Toggles)
+                                        new JProperty("MaxEngineRPM", data.ConstantsValues.MotorValues.EngineRpmMax), // Maxmium RPM of Engine
+                                        new JProperty("DifferentialRatio", data.ConstantsValues.MotorValues.DifferentialRation), // Differential Ratio
+                                        new JProperty("GearRatioForward", string.Join(",", data.ConstantsValues.MotorValues.GearRatiosForward)), // Forward Gear Ratio's
+                                        new JProperty("GearRatioReverse", string.Join(",", data.ConstantsValues.MotorValues.GearRatiosReverse)), // Reverse Gear Ratios(s)
+                                        new JProperty("ShifterTypeValue", (int)data.ConstantsValues.MotorValues.ShifterTypeValue), // Enum 0-4 (unknown,arcade,automatic,manual,h-shifter)
+                                        new JProperty("SlotGear", string.Join(",", data.ConstantsValues.MotorValues.SlotGear)), // Slot selected if H-Shifter Requirements not met
+                                        new JProperty("SlotHandlePosition", string.Join(",", data.ConstantsValues.MotorValues.SlotHandlePosition)), // Position of H-Shifter Handle - 0 = Neutral
+                                        new JProperty("SlotSelector", string.Join(",", data.ConstantsValues.MotorValues.SlotSelectors)) // Not used, unsure!
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+
+
+            /*truckConstantCapacity = new JObject
             {
                 "TruckValues", new JObject
                 {
-                    {"Constant", new JObject // The values in this Section should not change often, only on loading & swapping truck!
+                    {"Constant2", new JObject // The values in this Section should not change often, only on loading & swapping truck!
                     {
                         {"CapacityValues", new JObject
                         {
@@ -79,7 +78,7 @@ namespace SCSTelemetryServer
             {
                 "TruckValues", new JObject
                 {
-                    {"Constant", new JObject // The values in this Section should not change often, only on loading & swapping truck!
+                    {"Constant3", new JObject // The values in this Section should not change often, only on loading & swapping truck!
                     {
                         {"WarningFactors", new JObject
                         {
@@ -100,7 +99,7 @@ namespace SCSTelemetryServer
             {
                 "TruckValues", new JObject
                 {
-                    {"Constant", new JObject // The values in this Section should not change often, only on loading & swapping truck!
+                    {"Constant4", new JObject // The values in this Section should not change often, only on loading & swapping truck!
                     {
                         {"WheelValues", new JObject
                         {
@@ -115,7 +114,9 @@ namespace SCSTelemetryServer
                     }
                     }
                 }
-            }; // ConstantJSON End
+            };*/
+            
+            // ConstantJSON End
         } //Void End
 
         //Truck.OnJob = Main.MainData.SpecialEventsValues.OnJob.ToString();

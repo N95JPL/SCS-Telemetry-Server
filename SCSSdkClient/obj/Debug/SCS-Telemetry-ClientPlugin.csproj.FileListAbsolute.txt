@@ -9,3 +9,9 @@ D:\SCS-Telemetry-Server\SCSSdkClient\obj\Debug\SCS-Telemetry-ClientPlugin.dll
 D:\SCS-Telemetry-Server\SCSSdkClient\obj\Debug\SCS-Telemetry-ClientPlugin.pdb
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.dll
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.pdb
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.dll
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.pdb
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCSSdkClient\obj\Debug\SCS-Telemetry-ClientPlugin.csprojAssemblyReference.cache
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCSSdkClient\obj\Debug\SCS-Telemetry-ClientPlugin.csproj.CoreCompileInputs.cache
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCSSdkClient\obj\Debug\SCS-Telemetry-ClientPlugin.dll
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCSSdkClient\obj\Debug\SCS-Telemetry-ClientPlugin.pdb

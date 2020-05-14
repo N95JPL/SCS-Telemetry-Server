@@ -3,20 +3,20 @@
   <assemblyIdentity name="SCS-Telemetry-Server.application" version="0.1.5.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="SCS-Telemetry-Server" asmv2:product="SCS-Telemetry-Server" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true">
-    <deploymentProvider codebase="http://desktop-3755d4d/Arduino-ETS2-Telemetry/SCS-Telemetry-Server.application" />
+    <deploymentProvider codebase="http://desktop-g9ul0mo/Arduino-ETS2-Telemetry/SCS-Telemetry-Server.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SCS-Telemetry-Server.exe.manifest" size="6635">
+    <dependentAssembly dependencyType="install" codebase="SCS-Telemetry-Server.exe.manifest" size="5805">
       <assemblyIdentity name="SCS-Telemetry-Server.exe" version="0.1.5.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>M83spiOtUwBVwxnCgDccBdN2aIHHzsPnAj5hl3Ny4IM=</dsig:DigestValue>
+        <dsig:DigestValue>eXdSTV3iBfvzvcxuty/ZGS80c6XeFsui97uYpuXYQGg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

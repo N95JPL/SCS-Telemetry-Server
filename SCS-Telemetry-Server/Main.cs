@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using System.IO.Ports;
 using System.Threading;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using SCSTelemetryServer.Properties;
 
 namespace SCSTelemetryServer
 {
@@ -17,7 +20,9 @@ namespace SCSTelemetryServer
         private Coordinates Coord = new Coordinates();
         private TruckVariables Truck = new TruckVariables();
         private Game Game = new Game();
-        private Server Server = new Server();
+        //private Server Server = new Server();
+
+        public SimpleHTTPServer myServer;
 
         public SCSTelemetry MainData;
         public string viewName = "Driving";
@@ -58,6 +63,7 @@ namespace SCSTelemetryServer
                 null,
                 0,
                 4500);
+
             LocationTimer = new System.Threading.Timer(new TimerCallback(Coord.getDistance),
                 null,
                 3000,
@@ -66,9 +72,11 @@ namespace SCSTelemetryServer
                 null,
                 0,
                 100);
-            PortManager = new Thread(portManager);
-            PortManager.Start();
+            //PortManager = new Thread(portManager);
+            //PortManager.Start();
+            //Directory.GetCurrentDirectory() + 
             InitializeComponent();
+            myServer = new SimpleHTTPServer("/", Settings.Default.WebPort);
         }
 
         /*        private void TelemetryOnJobStarted(object sender, EventArgs e) =>
@@ -137,6 +145,7 @@ namespace SCSTelemetryServer
                                  "Update Int.: " + UpdateInterval + "m\n\n" +
                                  "COM Port: " + ComPort;
                 Truck.TruckConstant(data.TruckValues);
+                Truck.truckConstantString = data.TruckValues;
             }
 
             catch (Exception ex)
@@ -198,6 +207,7 @@ namespace SCSTelemetryServer
 
         private void ScreenText_Enter(object sender, EventArgs e)
         {
+            
             throw new NotImplementedException();
         }
 
@@ -216,7 +226,7 @@ namespace SCSTelemetryServer
                 LocationTimer.Dispose();
                 UITimer.Dispose();
                 Telemetry.Dispose();
-                PortManager.Abort();
+                //PortManager.Abort();
             }
         }
 

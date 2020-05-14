@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OQnhr6k9E/JqtSYJy8ZXLHJdLbA8BktdN0ZjhjQQd+Q=</dsig:DigestValue>
+        <dsig:DigestValue>t2Vz730ngzRJxvrTZwzIQLoqUv2O+sXPocFf91os7eU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SCS-Telemetry-Server.exe" size="46560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SCS-Telemetry-Server.exe" size="42568">
       <assemblyIdentity name="SCS-Telemetry-Server" version="0.1.1.0" publicKeyToken="F7D98B370BA901ED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3b3uimEmS87ffB6SAdC+sqvAiBHGRcfIGXj8vXmPtW0=</dsig:DigestValue>
+        <dsig:DigestValue>WO4DIO9yVD5rbm+TxpfutvJOMDGQT+Jsp2uoQrk3tc4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -92,34 +92,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>OQnhr6k9E/JqtSYJy8ZXLHJdLbA8BktdN0ZjhjQQd+Q=</dsig:DigestValue>
+      <dsig:DigestValue>t2Vz730ngzRJxvrTZwzIQLoqUv2O+sXPocFf91os7eU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="plugins\SCS-Telemetry-Plugin-x64.dll" size="97792">
+  <file name="SCS-Telemetry-Server.exe.config" size="3282">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>sLSvaNcpQeUF2UPfZKKvxOcFEheoJ5sczGhCh3BuuIs=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="plugins\SCS-Telemetry-Plugin-x86.dll" size="80896">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Z2hJEg2sSGAOMDgLdMs+Ezt4DGcQinTpHfFYyJ13dFU=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="SCS-Telemetry-Server.exe.config" size="2389">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XsHH3z+KzznhwVHs7EXBllFYJB3grkkF88cPjwW8Bfc=</dsig:DigestValue>
+      <dsig:DigestValue>obgCcishLYbsHG7vwQCPzTH5zAYrW9CnKOyk/B0Dd3A=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

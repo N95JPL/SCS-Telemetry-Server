@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SCS-Telemetry-Server.exe" size="37448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SCS-Telemetry-Server.exe" size="44104">
       <assemblyIdentity name="SCS-Telemetry-Server" version="0.1.1.0" publicKeyToken="F7D98B370BA901ED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WA6iJQOGy0uklxVDn6xgC9uMEuDw/tNdu2zv+43RwAw=</dsig:DigestValue>
+        <dsig:DigestValue>QqvwLOVOhF3v474XyVcww5pqf7A8bExGb34BMvs3xuA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -93,24 +93,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>sDFa7gdBTL0C/HXSC3gqpOz9M7KOt5rKQrNghIm8nBI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="plugins\SCS-Telemetry-Plugin-x64.dll" size="44032">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9RbDEuCOMSQ2Fbn8g4hqOlG0wEeUF0GGCUQ8PSot0aY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="plugins\SCS-Telemetry-Plugin-x86.dll" size="80896">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>j6niQsgxhNxspAzepgCSwMD70gMHYel5VAUN9lwbWwU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SCS-Telemetry-Server.exe.config" size="3282">

@@ -23,7 +23,6 @@ D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlu
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.pdb
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.xml
 D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.xml
-C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csprojAssemblyReference.cache
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCSTelemetryServer.Main.resources
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCSTelemetryServer.Properties.Resources.resources
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.GenerateResource.cache
@@ -32,8 +31,6 @@ C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Re
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.CoreCompileInputs.cache
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\GitVersionInformation.g.cs
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\cities_ETS2-All-DLC.json
-C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\plugins\SCS-Telemetry-Plugin-x86.dll
-C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\plugins\SCS-Telemetry-Plugin-x64.dll
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.exe.config
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.exe.manifest
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.application
@@ -48,3 +45,4 @@ C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Re
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.exe.manifest
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.application
 C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.CopyComplete
+C:\Users\joshu\Documents\GitHub\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csprojAssemblyReference.cache

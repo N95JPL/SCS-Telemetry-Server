@@ -40,6 +40,24 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="M:SCSTelemetryServer.SimpleHTTPServer.#ctor(System.String,System.Int32)">
+            <summary>
+            Construct server with given port.
+            </summary>
+            <param name="path">Directory path to serve.</param>
+            <param name="port">Port of the server.</param>
+        </member>
+        <member name="M:SCSTelemetryServer.SimpleHTTPServer.#ctor(System.String)">
+            <summary>
+            Construct server with suitable port.
+            </summary>
+            <param name="path">Directory path to serve.</param>
+        </member>
+        <member name="M:SCSTelemetryServer.SimpleHTTPServer.Stop">
+            <summary>
+            Stop server and dispose all functions.
+            </summary>
+        </member>
         <member name="F:SCSTelemetryServer.Main.components">
             <summary>
             Required designer variable.

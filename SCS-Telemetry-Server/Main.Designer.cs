@@ -1,4 +1,8 @@
-﻿namespace SCSTelemetryServer
+﻿using SCSTelemetryServer.Properties;
+using System.Net;
+using System.Net.Sockets;
+
+namespace SCSTelemetryServer
 {
     partial class Main
     {
@@ -26,6 +30,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+
         public void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
