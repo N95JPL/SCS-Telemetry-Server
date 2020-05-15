@@ -22,7 +22,6 @@ namespace SCSTelemetryServer
         private Game Game = new Game();
         //private Server Server = new Server();
 
-        public SimpleHTTPServer myServer;
 
         public SCSTelemetry MainData;
         public string viewName = "Driving";
@@ -76,7 +75,6 @@ namespace SCSTelemetryServer
             //PortManager.Start();
             //Directory.GetCurrentDirectory() + 
             InitializeComponent();
-            myServer = new SimpleHTTPServer("/", Settings.Default.WebPort);
         }
 
         /*        private void TelemetryOnJobStarted(object sender, EventArgs e) =>
@@ -145,7 +143,6 @@ namespace SCSTelemetryServer
                                  "Update Int.: " + UpdateInterval + "m\n\n" +
                                  "COM Port: " + ComPort;
                 Truck.TruckConstant(data.TruckValues);
-                Truck.truckConstantString = data.TruckValues;
             }
 
             catch (Exception ex)
