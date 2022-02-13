@@ -1,8 +1,0 @@
-D:\SCS-Telemetry-Server\SCSSdkClient\bin\Release\SCS-Telemetry-ClientPlugin.dll
-D:\SCS-Telemetry-Server\SCSSdkClient\bin\Release\SCS-Telemetry-ClientPlugin.pdb
-D:\SCS-Telemetry-Server\SCSSdkClient\obj\Release\SCS-Telemetry-ClientPlugin.csproj.CoreCompileInputs.cache
-D:\SCS-Telemetry-Server\SCSSdkClient\obj\Release\SCS-Telemetry-ClientPlugin.dll
-D:\SCS-Telemetry-Server\SCSSdkClient\obj\Release\SCS-Telemetry-ClientPlugin.pdb
-D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.xml
-D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.dll
-D:\SCS-Telemetry-Server\SCS-Telemetry-Server\plugins\SCS-Telemetry-ClientPlugin.pdb

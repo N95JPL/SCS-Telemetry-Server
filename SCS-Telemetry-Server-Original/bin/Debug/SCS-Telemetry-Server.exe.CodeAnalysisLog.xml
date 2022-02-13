@@ -1,0 +1,895 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="17.0">
+ <Namespaces>
+  <Namespace Name="SCSTelemetryServer">
+   <Messages>
+    <Message Id="SCS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'SCS' in namespace name 'SCSTelemetryServer' by changing it to 'Scs'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Debug\SCS-Telemetry-Server.exe">
+   <Modules>
+    <Module Name="scs-telemetry-server.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'SCS-Telemetry-Server.exe' with a strong name key.</Issue>
+      </Message>
+      <Message Id="SCS-Telemetry-Server" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'SCS-Telemetry-Server' in assembly name 'SCS-Telemetry-Server.exe' by changing it to 'Scs-telemetry-server'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'SCS-Telemetry-Server.exe' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="SCSTelemetryServer">
+       <Types>
+        <Type Name="Coordinates" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#currentCity" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="current" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="54">Correct the casing of 'current' in member name 'Coordinates.currentCity' by changing it to 'Current'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#currentCountry" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="current" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="55">Correct the casing of 'current' in member name 'Coordinates.currentCountry' by changing it to 'Current'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FirstCharToUpper(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="17">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'Coordinates.FirstCharToUpper(string)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="15">Replace the call to 'string.operator ==(string, string)' in 'Coordinates.FirstCharToUpper(string)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#getDistance(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Double.TryParse(System.String,System.Double@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="TryParse" Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="71">'Coordinates.getDistance(object)' calls 'double.TryParse(string, out double)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
+             <Issue Name="TryParse" Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="72">'Coordinates.getDistance(object)' calls 'double.TryParse(string, out double)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
+             <Issue Name="TryParse" Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="73">'Coordinates.getDistance(object)' calls 'double.TryParse(string, out double)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
+            </Message>
+            <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="60">Correct the casing of 'get' in member name 'Coordinates.getDistance(object)' by changing it to 'Get'.</Issue>
+            </Message>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="60">In member 'Coordinates.getDistance(object)', consider replacing the data type identifier 'obj' in parameter name 'obj' with a more generic term, such as 'value'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#X" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="X" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="51">Consider providing a more meaningful name than member name 'Coordinates.X'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Y" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="52">Consider providing a more meaningful name than member name 'Coordinates.Y'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Z" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Z" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="53">Consider providing a more meaningful name than member name 'Coordinates.Z'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Coordinates+Cities" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'Coordinates.Cities'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CitiesList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="23">Change 'Coordinates.Cities.CitiesList' to return a collection or make it a method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Coordinates+CitiesList" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'Coordinates.CitiesList'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#X" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="X" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="37">Consider providing a more meaningful name than member name 'Coordinates.CitiesList.X'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Y" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="40">Consider providing a more meaningful name than member name 'Coordinates.CitiesList.Y'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Z" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Z" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Coordinates.cs" Line="43">Consider providing a more meaningful name than member name 'Coordinates.CitiesList.Z'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Game+GameValues" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'Game.GameValues'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#WeekDay" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="WeekDay" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Game.cs" Line="17">The compound word 'WeekDay' in member name 'Game.GameValues.WeekDay' exists as a discrete term. If your usage is intended to be single word, case it as 'Weekday' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Main" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="54">Method 'Main.Main()' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string)'. Retrieve the following string(s) from a resource table instead: "An error has occured!! OOPS!".</Issue>
+            </Message>
+            <Message TypeName="DoNotUseTimersThatPreventPowerStateChanges" Category="Microsoft.Mobility" CheckId="CA1601" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="65">Modify the call to 'Timer.Timer(TimerCallback, object, int, int)' in method 'Main.Main()' to set the timer interval to a value that's greater than or equal to one second.</Issue>
+            </Message>
+            <Message Id="occured" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="54">Correct the spelling of the unrecognized token 'occured' in the literal '"An error has occured!! OOPS!"'.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="54">Change 'Main.Main()' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ArduinoETS2Telemetry_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="248">Method 'Main.ArduinoETS2Telemetry_FormClosing(object, FormClosingEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons)'. Retrieve the following string(s) from a resource table instead: "Arduino-ETS2-Server".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="248">Method 'Main.ArduinoETS2Telemetry_FormClosing(object, FormClosingEventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons)'. Retrieve the following string(s) from a resource table instead: "Are you sure you want to quit?".</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="248">Change 'Main.ArduinoETS2Telemetry_FormClosing(object, FormClosingEventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ComPort" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="ComPort" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'ComPort' in member name 'Main.ComPort' exists as a discrete term. If your usage is intended to be single word, case it as 'Comport' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'Main.ComPort' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Telemetry" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="16">'Main' contains field 'Main.Telemetry' that is of IDisposable type: 'SCSSdkTelemetry'. Change the Dispose method on 'Main' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAllPorts()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="388">Change 'List&lt;string&gt;' in 'Main.GetAllPorts()' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="388">Change 'Main.GetAllPorts()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="264">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Current Game Information".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="494">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Driving Telemetry".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="165">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "General Data".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="235">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Geographic Information".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="574">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Job Data".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="584">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "SCS Telemetry Server".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="598">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "SCS Telemetry Server".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="110">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Server Settings".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="127">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Set Screen".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="564">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Trailer Data".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="307">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Truck Data".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="555">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Truck Information".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.Designer.cs" Line="433">Method 'Main.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Truck Warnings".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#JSONmsg" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'Main.JSONmsg' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+            <Message Id="Nmsg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Nmsg' in member name 'Main.JSONmsg' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#portManager(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="280">Method 'Main.portManager(object)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Exception: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="365">Method 'Main.portManager(object)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Exception: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="381">Method 'Main.portManager(object)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Exception: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="287">Method 'Main.portManager(object)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Message: ".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="280">Modify 'Main.portManager(object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="379">Modify 'Main.portManager(object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="362">Modify 'Main.portManager(object)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="port" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="267">Correct the casing of 'port' in member name 'Main.portManager(object)' by changing it to 'Port'.</Issue>
+            </Message>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="267">In member 'Main.portManager(object)', consider replacing the data type identifier 'obj' in parameter name 'obj' with a more generic term, such as 'value'.</Issue>
+            </Message>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="295">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Main.portManager(object)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="299">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Main.portManager(object)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="303">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Main.portManager(object)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="310">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.portManager(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="326">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.portManager(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="326">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.portManager(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ScreenText_Enter(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="242">'Main.ScreenText_Enter(object, EventArgs)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Server" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Main.Server' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#setUIValues(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="236">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Exception: ".</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="219">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "AdBlue: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="221">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Air Pres. Emergency: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="223">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Air Pressure: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="214">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Air Pressure: , psi".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="225">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Battery: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="215">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Brake Temperature: , °C".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="211">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "CC Active: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="212">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "CC Speed: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="200">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "City: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="201">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Country: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="198">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Fuel Capacity: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="227">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Fuel: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="213">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "GPS: , :".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="208">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Gear: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="196">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Manufacturer: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="206">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Mileage: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="197">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Model: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="229">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Oil Pressure: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="203">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Radio Signal: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="202">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Radio Station: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="210">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Range: ,  Miles".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="195">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Registration: ,  (, )".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="209">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Remaining Fuel: , L".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="216">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Retarder: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="207">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Speed: ,  MPH".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="199">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Transmission: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="231">Method 'Main.setUIValues(object)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Water Temp.: ".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="234">Modify 'Main.setUIValues(object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="AdBlue" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="219">Correct the spelling of the unrecognized token 'AdBlue' in the literal '"AdBlue: "'.</Issue>
+            </Message>
+            <Message Id="Pres" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="221">Correct the spelling of the unrecognized token 'Pres' in the literal '"Air Pres. Emergency: "'.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="198">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="206">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="207">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="209">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="210">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="212">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="214">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="215">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="213">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="213">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="213">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.UInt32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="216">Because the behavior of 'uint.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.setUIValues(object)' with a call to 'uint.ToString(IFormatProvider)'. If the result of 'uint.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Telemetry" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'Main.Telemetry' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Telemetry_Data(SCSSdkClient.Object.SCSTelemetry,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="UIMethod" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="106">'Main.Telemetry_Data(SCSTelemetry, bool)' is coupled with 35 different (non-IComponent) types from 5 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="187">Method 'Main.Telemetry_Data(SCSTelemetry, bool)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Telemetry was closed: ".</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Method 'Main.Telemetry_Data(SCSTelemetry, bool)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "General info: \n\nSDK Running: , \n\n, SDK Version: , Game: , Game Version: , .,...".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="184">Modify 'Main.Telemetry_Data(SCSTelemetry, bool)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="106">Remove the underscores from member name 'Main.Telemetry_Data(SCSTelemetry, bool)'.</Issue>
+            </Message>
+            <Message Id="System.DateTime.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="161">Because the behavior of 'DateTime.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'DateTime.ToString(IFormatProvider)'. If the result of 'DateTime.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="132">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="170">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'Main.Telemetry_Data(SCSTelemetry, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Main.cs" Line="112">In externally visible method 'Main.Telemetry_Data(SCSTelemetry, bool)', validate parameter 'data' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#viewName" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'Main.viewName' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RadioChecker" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RadioCheck(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Radio.cs" Line="16">In method 'RadioChecker.RadioCheck(object)', call System.IDisposable.Dispose on object 'client' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Radio.cs" Line="54">Modify 'RadioChecker.RadioCheck(object)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Radio.cs" Line="15">In member 'RadioChecker.RadioCheck(object)', consider replacing the data type identifier 'obj' in parameter name 'obj' with a more generic term, such as 'value'.</Issue>
+            </Message>
+            <Message TypeName="PassSystemUriObjectsInsteadOfStrings" Category="Microsoft.Usage" CheckId="CA2234" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Radio.cs" Line="15">Modify 'RadioChecker.RadioCheck(object)' to call 'HttpClient.GetAsync(Uri)' instead of 'HttpClient.GetAsync(string)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Server" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'Server' because it creates members of the following IDisposable types: 'SerialPort'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Coord" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Server.Coord' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Game" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Server.Game' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAllPorts()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="50">'Server.GetAllPorts()' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#portManager(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="22">'Server.portManager(object)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+            <Message Id="System.IO.Ports.SerialPort.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="43">Method 'Server.portManager(object)' passes a literal string as parameter 'text' of a call to 'SerialPort.Write(string)'. Retrieve the following string(s) from a resource table instead: ";".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="35">Modify 'Server.portManager(object)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="obj" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="22">Parameter 'obj' of 'Server.portManager(object)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Radios" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">It appears that field 'Server.Radios' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#serverManager(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="19">'Server.serverManager(object)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="19">The 'this' parameter (or 'Me' in Visual Basic) of 'Server.serverManager(object)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+            <Message Id="obj" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Server.cs" Line="19">Parameter 'obj' of 'Server.serverManager(object)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TruckVariables+ConstantValues" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'TruckVariables.ConstantValues'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#RegPlateCountryID" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="ID" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Truck.cs" Line="23">Correct the casing of 'ID' in member name 'TruckVariables.ConstantValues.RegPlateCountryID' by changing it to 'Id'. 'Id' is an abbreviation and therefore is not subject to acronym casing guidelines.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TruckVariables+CurrentValues" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'TruckVariables.CurrentValues'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="TruckVariables+DamageValues" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'TruckVariables.DamageValues'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="TruckVariables+LightValues" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'TruckVariables.LightValues'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="TruckVariables+WarningValues" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'TruckVariables.WarningValues'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Adblue" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Adblue" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-02-11 23:24:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original" File="Truck.cs" Line="53">Correct the spelling of 'Adblue' in member name 'TruckVariables.WarningValues.Adblue' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506">
+   <Name>Avoid excessive class coupling</Name>
+   <Description>Types and methods with a high degree of class coupling can be difficult to maintain.</Description>
+   <Resolution Name="UIMethod">{0} is coupled with {1} different (non-IComponent) types from {2} different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above {3} indicates poor maintainability, a class coupling between {3} and {4} indicates moderate maintainability, and a class coupling below {4} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb397994.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Avoid uncalled private code</Name>
+   <Description>There is uncalled code that is not externally visible and is not a known runtime entry point. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>Avoid unused private fields</Name>
+   <Description>Private fields were detected that do not appear to be accessed within the assembly. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Disposable fields should be disposed</Name>
+   <Description>If a type that implements IDisposable owns fields that also implement IDisposable, the encapsulating type's Dispose() implementation should call Dispose() on each disposable field.</Description>
+   <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Do not declare visible instance fields</Name>
+   <Description>Instance fields that are visible outside of the type that declares them, limit your ability to change the implementation details for those data items. Use properties instead. They do not compromise usability or performance and they do provide flexibility in that they conceal the implementation details of the underlying data.</Description>
+   <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>Do not ignore method results</Name>
+   <Description>The result of methods that return new instances of strings should be assigned to a variable and subsequently used. If the result of a method that creates a new object, such as String.ToLower(), is not assigned to a variable, the call is wasted.</Description>
+   <Resolution Name="TryParse">{0} calls {1} but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotUseTimersThatPreventPowerStateChanges" Category="Microsoft.Mobility" CheckId="CA1601">
+   <Name>Do not use timers that prevent power state changes</Name>
+   <Description>Do not poll more often than or utilize timers that fire more frequently than once per second. Higher frequency periodic activity will keep the CPU busy and interfere with power-saving idle timers that turn off the display and hard disks.</Description>
+   <Resolution Name="Default">Modify the call to {0} in method {1} to set the timer interval to a value that's greater than or equal to one second.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182230.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="mobilityrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Assembly">Correct the casing of '{0}' in assembly name {1} by changing it to '{2}'.</Resolution>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Resolution Name="MemberAbbreviation">Correct the casing of '{0}' in member name {1} by changing it to '{2}'. '{2}' is an abbreviation and therefore is not subject to acronym casing guidelines.</Resolution>
+   <Resolution Name="Namespace">Correct the casing of '{0}' in namespace name '{1}' by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberMoreMeaningfulName">Consider providing a more meaningful name than member name {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+   <Name>Identifiers should not contain type names</Name>
+   <Description>Avoid using language-specific types name in parameters and members and data type identifiers in parameters. Types names might not be intuitive for all developers. It is recommended that you select a generic name, such as 'value', instead. If this is not sufficient, be sure to use the type name as it is defined in the .NET Framework Library and avoid language-specific type names completely. Some examples of C#-specific type names are 'float' (use 'Single' if a generic name is not sufficient), and 'ulong' (use 'UInt64' if a generic name is not sufficient).</Description>
+   <Resolution Name="LanguageIndependentMemberParameter">In member {0}, consider replacing the data type identifier '{1}' in parameter name {2} with a more generic term, such as 'value'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb531486.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identifiers should not contain underscores</Name>
+   <Description>Do not use underscores when specifying identifiers. Some generated Visual Studio identifiers for applications contain underscore characters. Underscore characters should generally be avoided in public identifiers.</Description>
+   <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+   <Name>Nested types should not be visible</Name>
+   <Description>Do not use public, protected or protected internal (Protected Friend) nested types as a way of grouping types. Use namespaces for this purpose. There are very limited scenarios where nested types are the best design. Also, nested type member accessibility is not clearly understood by all audiences. Enumerators are exempt from this rule.</Description>
+   <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182162.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="PassSystemUriObjectsInsteadOfStrings" Category="Microsoft.Usage" CheckId="CA2234">
+   <Name>Pass System.Uri objects instead of strings</Name>
+   <Description>If there are two overloads one taking System.Uri and one taking System.String, library code should never call the string-based overload.</Description>
+   <Resolution Name="Default">Modify {0} to call {1} instead of {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182360.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+   <Name>Properties should not return arrays</Name>
+   <Description>Properties that return arrays are prone to code inefficiencies. Consider using a collection or making this a method. See the design guidelines for more information.</Description>
+   <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/0fss9skc.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+   <Name>Specify CultureInfo</Name>
+   <Description>If an overload exists that takes a CultureInfo argument, it should always be called in favor of an overload that does not. The CultureInfo type contains culture-specific information required for performing numeric and string operations, such as casing, formatting, and string comparisons. In scenarios where conversion and parsing behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182189.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+   <Name>Specify MessageBoxOptions</Name>
+   <Description>In order to run correctly on right-to-left systems, all calls to MessageBox.Show should use the overload that specifies MessageBoxOptions as an argument. Programs should detect whether they are running on a right-to-left system at run-time and pass the appropriate MessageBoxOptions value in order to display correctly.</Description>
+   <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182191.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+   <Name>Test for empty strings using string length</Name>
+   <Description>To test for empty strings, check if String.Length is equal to zero. Constructs such as "".Equals(someString) and String.Empty.Equals(someString) are less efficient than testing the string length. Replace these with checks for someString.Length == 0.</Description>
+   <Resolution Name="IsNullOrEmpty">Replace the call to {0} in {1} with a call to 'String.IsNullOrEmpty'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182279.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="NonBreaking">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

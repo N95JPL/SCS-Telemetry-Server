@@ -1,0 +1,56 @@
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\cities_ETS2-All-DLC.json
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\plugins\SCS-Telemetry-Plugin-x86.dll
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\plugins\SCS-Telemetry-Plugin-x64.dll
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.exe.config
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.exe.manifest
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.application
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.exe
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-Server.pdb
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\Newtonsoft.Json.dll
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\Newtonsoft.Json.xml
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCSTelemetryServer.Main.resources
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCSTelemetryServer.Properties.Resources.resources
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.GenerateResource.cache
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.CoreCompileInputs.cache
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\GitVersionInformation.g.cs
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.exe.manifest
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.application
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.CopyComplete
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.exe
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.pdb
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csprojAssemblyReference.cache
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.dll
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.pdb
+D:\SCS-Telemetry-Server\SCS-Telemetry-Server\bin\Release\SCS-Telemetry-ClientPlugin.xml
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.AssemblyReference.cache
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.SuggestedBindingRedirects.cache
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCSTelemetryServer.Main.resources
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCSTelemetryServer.Properties.Resources.resources
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.csproj.GenerateResource.cache
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.exe
+D:\Euro Truck Simulator\SCS-Telemetry-Server\SCS-Telemetry-Server\obj\Release\SCS-Telemetry-Server.pdb
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.csproj.AssemblyReference.cache
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.csproj.SuggestedBindingRedirects.cache
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCSTelemetryServer.Main.resources
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCSTelemetryServer.Properties.Resources.resources
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.csproj.GenerateResource.cache
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.exe
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.pdb
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\cities_ETS2-All-DLC.json
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\plugins\SCS-Telemetry-Plugin-x86.dll
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\plugins\SCS-Telemetry-Plugin-x64.dll
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-Server.exe.config
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-Server.exe.manifest
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-Server.application
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-Server.exe
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-Server.pdb
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\Newtonsoft.Json.dll
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-ClientPlugin.dll
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\Newtonsoft.Json.xml
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-ClientPlugin.pdb
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\bin\Release\SCS-Telemetry-ClientPlugin.xml
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.csproj.CoreCompileInputs.cache
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\GitVersionInformation.g.cs
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.exe.manifest
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.application
+D:\ETS\SCS-Telemetry-Server-Archive\SCS-Telemetry-Server-Original\obj\Release\SCS-Telemetry-Server.csproj.CopyComplete

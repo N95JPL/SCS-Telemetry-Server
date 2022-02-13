@@ -1,5 +1,0 @@
-D:\ETS2-Arduino-Telemetry\SCSSdkClient\bin\Release\Arduino-Client.dll
-D:\ETS2-Arduino-Telemetry\SCSSdkClient\bin\Release\Arduino-Client.pdb
-D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Release\Arduino-Client.csproj.CoreCompileInputs.cache
-D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Release\Arduino-Client.dll
-D:\ETS2-Arduino-Telemetry\SCSSdkClient\obj\Release\Arduino-Client.pdb
